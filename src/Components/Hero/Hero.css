@@ -1,0 +1,324 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ /* Banner starts here  */
+.banner .carousel-indicators li{
+    background-color:var(--textforburgundy);
+}
+.banner .carousel-inner .carousel-item img{
+    max-height: 100vh;
+    padding-top: 4.5rem;
+    object-fit: cover;
+    position: relative;
+}
+.banner .carousel-inner .carousel-body{
+    position: absolute;
+    bottom: 12%;
+    font-size: 2rem;
+    margin-left: 12%;
+    color:var(--textforburgundy);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.banner .carousel-inner .carousel-body .form-container{
+    display: flex;
+    gap: 0.5rem;
+}
+.banner .carousel-inner .carousel-body .form-container input{
+    min-width: 80%;
+}
+.banner .carousel-inner .carousel-body .form-container button{
+min-width: 20%;
+font-size: 1.2rem;
+border-radius: 1rem;
+}
+.banner .carousel-inner .carousel-body .form-container button:hover{
+  background-color: var(--Burgundy);
+  border: 1px var(--bgColorTwo) solid;
+}
+.banner .carousel-inner .carousel-body .what-to-learn{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--Sage-Green);
+    margin-top:5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.banner .carousel-inner .carousel-body .view-educators{
+    background-color: transparent;
+    border-top:4px solid var(--textforburgundy);
+    border-bottom:4px solid var(--textforburgundy);
+    border-left: none;
+    border-right: none;
+}
+.banner .carousel-inner .carousel-body .view-educators a{
+    text-decoration: none;
+    color: var(--textforburgundy);
+}
+.banner .carousel .slide-btn{
+    background-color:#778899;
+    height: 2.6rem;
+    width: 2.6rem;
+    margin: 25% 5% 0% 5%;
+    border-radius: 50%;    
+}
+.banner .carousel-inner .carousel-body .form-container{
+    width: 40vw;
+    height: 3.5rem;
+    margin: 0% 20% 0% 20%;
+    border-radius: 0.2rem;
+}
+.banner .carousel-inner .carousel-body .form-container button{
+    background-color: var(--bgColorTwo);
+    border: 1px var(--textforburgundy) solid;
+    color: var(--textforburgundy);
+  }
+.banner .carousel-inner .carousel-body .form-container input{
+    font-size: 1.2rem;
+}
+.first-content-container{
+    margin:8% 4%;
+}
+.first-content-container .header-text{
+    text-align: center;
+    font-family:sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.first-content-container .wrapper{
+    display: flex;
+    gap: 1.5rem;
+    margin: 3rem 0rem;
+}
+.first-content-container .wrapper .first-content{
+    display: flex;
+    gap: 0.9rem;
+}
+.first-content-container .wrapper .first-content h2{
+    font-size: 5rem;
+    color: var(--Sage-Green);
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+.first-content-container .wrapper .first-content .container .f-p{
+ text-transform: uppercase;
+ font-weight: 800;
+ color: var(--Burgundy);
+ font-size: 1.5rem;
+ font-family: Arial, Helvetica;
+ line-height: 1.6rem;
+}
+.first-content-container .wrapper .first-content .container p{
+    font-size: 1.1rem;
+     font-weight: 600;
+     line-height: 1.4rem;
+}
+.first-content-container button{
+    margin: auto;
+    background-color: var(--Burgundy);
+    width: 15vw;
+    height: 10vh;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+}
+.first-content-container button a{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--textforburgundy);
+    text-decoration: none;
+}
+.first-content-container button:hover,
+.first-content-container button:active{
+    background-color: var(--Sage-Green);
+}
+ .second-content-container img{
+    min-height: 80vh;
+    min-width: 100%;
+    object-fit: cover;
+    margin-top: 7rem;
+    margin-bottom: 6rem;
+    position: relative;
+    align-items: end;
+}
+.second-content-container .first-content{
+    position: absolute;
+    top: 97rem;
+    max-width: 38%;
+    min-height: 50%;
+    padding: 3rem 2rem;
+    background-color: rgba(128, 0, 32, 0.9);
+    color: var(--textforburgundy);
+    margin-left: 4%;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;  
+}
+.second-content-container .first-content .heaader-text{
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+.second-content-container .first-content .content-text{
+    font-size: 1.08rem;
+}
+.second-content-container .first-content button{
+  width: 13vw;
+  height: 3.5rem;
+  background-color: var(--bgColorTwo);
+  margin:2rem 0rem 0rem 25%;
+  border: none;
+  border-radius: 2rem;
+}
+.second-content-container .first-content button a{
+    color: var(--Burgundy);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+} 
+.second-content-wrapper .first-content{
+    max-width: 95%;
+    min-height: 50%;
+    padding: 3rem 1rem;
+    background-color: rgb(128, 0, 32);
+    color: var(--textforburgundy);
+    margin:20% 2%;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    display: none;  
+}
+.second-content-wrapper .first-content .heaader-text{
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+.second-content-wrapper .first-content .content-text{
+    font-size: 1rem;
+}
+.second-content-wrapper .first-content button{
+  width: 60%;
+  height: 3.5rem;
+  background-color: var(--bgColorTwo);
+  margin:2% 20%;
+  border: none;
+  border-radius: 2rem;
+}
+.third-content-container{
+    margin:6rem 5rem 4rem 5rem;
+}
+.third-content-container .wrapper{
+    display: flex;
+    gap: 5rem;
+}
+.third-content-container .wrapper-two{
+    display: none;
+}
+.third-content-container h2{
+    font-size: 2rem;
+    font-weight: 800;
+    padding-bottom: 0.7rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.third-content-container p{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.third-content-container .text-container{
+    flex-basis: 50%;
+}
+.third-content-container .text-container .accordion{
+    padding-top: 1.3rem;
+}
+.third-content-container .text-container .accordion button{
+ border:none;
+ padding:0.8rem 1.3rem;
+ background-color: var(--Sage-Green);
+ color: var(--Burgundy);
+ font-size: 1.2rem;
+ box-shadow: 0 0 0 0.8px #800020;
+}
+.third-content-container .text-container .accordion .accordion-body{
+    font-size: 0.9rem;
+}
+.third-content-container .text-container .accordion .accordion-item{
+    background-color: rgb(128, 0, 32);
+    color: #FFF8DC;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+}
+.third-content-container .wrapper .img-container {
+    border: 2px solid transparent; 
+    display: inline-block;
+    max-width: 35rem;
+    max-height: 22.7rem;
+    margin-top: 2rem;
+}
+.third-content-container .wrapper .img-container .img-slide {
+    max-width: 32rem;
+    max-height: 25rem;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+.last-content-container{
+   padding:8% 12%;
+   text-align: center;
+}
+.last-content-container h3{
+    padding-bottom: 5%;
+}
+.last-content-container .last-content-wrapper{
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.last-content-container .last-content-wrapper .content_first{
+    width: 18rem;
+    height: 18rem;
+    border-radius: 2rem;
+    border: var(--Sage-Green) 6px groove;
+    position: relative;
+}
+.last-content-wrapper .content_first #class{
+    padding-top: 45%;
+    font-size: 1.3rem;
+    font-family: "Domine", serif;
+    color:#000;
+}
+.last-content-wrapper .content_first:hover #class{
+    display: none;
+}
+.last-content-container .last-content-wrapper .content_first .overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(154, 205, 50,0.3);
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition:.6s ease;
+    font-family: "Domine", serif;
+}
+.last-content-container .last-content-wrapper .content_first:hover .overlay{
+    height: 17.5rem; 
+    padding:4rem 0rem 3rem 0rem;
+}
+.last-content-container .last-content-wrapper .content_first:hover .overlay  .overlay-p{
+  font-size: 1.2rem;
+}
+.last-content-container .last-content-wrapper .content_first .overlay p{
+    color: var(--Burgundy);
+    padding: 0 0.5rem;
+} 
+.last-content-container .last-content-wrapper .content_first .overlay button{
+    width:9rem;
+    height: 3.5rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--Burgundy);
+}
+.last-content-container .last-content-wrapper .content_first .overlay button a{
+    color: var(--textforburgundy);
+    text-decoration: none;
+}

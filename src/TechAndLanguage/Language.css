@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.language-main-container {
+    padding-top: 5rem;
+    display: flex;
+    height: 100%; 
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.language-wrapper {
+    background-image: url('../Images/NigeriaImage.jpg');
+    background-size: cover; 
+    background-position: center; 
+    flex-basis: 50%;
+    background-repeat: no-repeat; 
+}
+.language-inner-wrapper{
+    width: 80%;
+    height: 90%;
+    margin:2rem auto;
+}
+.language-wrapper .language-header-texts{
+    background-color: var(--Burgundy);
+    color: var(--textforburgundy);
+    padding:1.5rem 2rem 1rem 2rem;
+    opacity: 0.9;
+}
+
+.language-inner-wrapper .language-form{
+    background-color: var(--textforburgundy);
+    padding:1.5rem 2rem 2rem 2rem;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.language-form label{
+     color: #000;
+}
+.language-form input{
+    outline: none;
+}
+.language-form .language-btn{
+    height: 3.5rem;
+    background-color: var(--Burgundy);
+    color: var(--textforburgundy);
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    border: var(--bgColorTwo) 2px solid;
+}
+.language-wrapper-two {
+    background-image: url('../Images/internationalLanguage.jpg');
+    background-size: contain; 
+    background-position: center; 
+    flex-basis: 50%;   
+    background-repeat: no-repeat; 
+}
+.language-wrapper-two .language-wrapper-two-inner{
+    background-color: rgba(0, 0, 0,0.7);
+    padding:0 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--textforburgundy);
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+.language-wrapper-two-inner.fade-in {
+    opacity: 1; 
+} 
+  .language-wrapper-two-inner.fade-out {
+    opacity: 0; 
+  }
+.language-wrapper-two .language-wrapper-two-inner p{
+    font-size: 1.2rem;
+}
+.lesson-days-main-wrapper{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin:1.3rem 0 ;
+}
+.lesson-days-wrapper input{
+    width: 1.6rem !important;
+    height: 1.6rem !important;
+}
+.lesson-days-wrapper{
+    display: flex;
+    gap: 0.4rem;
+}

@@ -1,0 +1,287 @@
+*{
+    padding: 0;
+    margin: 0;
+   box-sizing: border-box; 
+   font-family: sans-serif;
+}
+.slider .carousel-inner .carousel-item img{
+    object-fit: cover;
+    max-height: 100vh;
+    position: relative;
+}
+.slider .carousel-inner .carousel-body{
+  position: absolute;
+  bottom: 20%;
+  margin-left: 12%;
+  text-align: center;
+  color: var(--textforburgundy);
+
+}
+.slider .carousel-inner .carousel-body h2{
+    font-size: 2.5rem;
+}
+.slider .carousel-inner .carousel-body p{
+    font-size: 1.2rem;
+    padding-top: 1.7rem;
+}
+.slider .carousel-inner .carousel-body button{
+    background-color: var(--Burgundy);
+    width: 10rem;
+    height: 3.5rem;
+    border-radius: 2rem;
+    border: none;
+    color: var(--textforburgundy);
+    font-weight: 600;
+    font-size: 1rem;
+}
+.first-content-container{
+    margin:8% 4%;
+}
+.first-content-container .header-text{
+    text-align: center;
+    font-family:sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.first-content-container .wrapper{
+    display: flex;
+    gap: 1.5rem;
+    margin: 3rem 0rem;
+}
+.first-content-container .wrapper .first-content{
+    display: flex;
+    gap: 0.9rem;
+}
+.first-content-container .wrapper .first-content h2{
+    font-size: 5rem;
+    color: var(--Sage-Green);
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+.first-content-container .wrapper .first-content .container .f-p{
+ text-transform: uppercase;
+ font-weight: 800;
+ color: var(--Burgundy);
+ font-size: 1.4rem;
+ font-family: Arial, Helvetica;
+ line-height: 1.6rem;
+}
+.first-content-container .wrapper .first-content .container p{
+    font-size: 1.1rem;
+     font-weight: 600;
+     line-height: 1.4rem;
+}
+.first-content-container button{
+    margin-left: 40%;
+    background-color: var(--Burgundy);
+    width: 15vw;
+    height: 10vh;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    color: var(--textforburgundy);
+    font-weight: 600;
+}
+.first-content-container button:hover,
+.first-content-container button:active{
+    background-color: var(--Sage-Green);
+}
+.educators-display{
+    margin: 12% 5%;
+    text-align: center;
+}
+.educators-display h1{
+    font-family:sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    position: relative;
+}
+.educators-display h1::after{
+    content: "";
+    position: absolute;
+    width: 37%;
+    height: 0.2rem;
+    background:linear-gradient(to right, var(--Burgundy), var(--Sage-Green));
+    left: 16rem !important;
+    bottom: -0.5rem;
+}
+.educators-display > p{
+    padding-top: 1rem;
+    font-size: 1.2rem;
+}
+.educators-display .wrapper{
+  display: flex;
+  margin-top:4rem ;
+  gap: 2.5rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+  .how-to-become-tutor{
+    margin:auto;
+    margin-bottom: 5rem;
+  }
+  .how-to-become-tutor .wrap{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding-top: 5rem;
+  }
+  .how-to-become-tutor h1{
+    text-align: center;
+    font-size:2.2rem ;
+    font-family:sans-serif;
+    font-weight: 700;
+    position: relative;
+  }
+  .how-to-become-tutor h1::after{
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 0.2rem;
+    background:linear-gradient(to right, var(--Burgundy), var(--Sage-Green));
+    left: 27.5rem !important;
+    bottom: -0.5rem;
+}
+  .how-to-become-tutor .how-to-become-tutor-wrap{
+   flex-basis: 45%;
+  }
+  .how-to-become-tutor-wrap .inner-content-wrapper{
+    display: flex;
+    gap: 2.5rem;
+  }
+  .how-to-become-tutor-wrap .inner-content-wrapper .icon{
+    font-size: 8rem;
+    color: var(--Burgundy);
+  }
+  .how-to-become-tutor-wrap .inner-content-wrapper .content-wrap h5{
+      font-weight: 600;
+      word-wrap: break-word;
+  }
+  .how-to-become-tutor-wrap  button{
+    margin-left: 20%;
+    background-color: var(--Burgundy);
+    width: 15vw;
+    height: 10vh;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    color: var(--textforburgundy);
+    font-weight: 600;
+    font-size:1rem ;
+  }
+  .how-to-become-tutor .how-img-container img{
+    max-width: 33rem;
+    min-height: 28rem;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  
+#form {
+  position: fixed;
+  top: -100%; 
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top:7rem;
+  margin-bottom: 9rem;
+  padding: 1rem 2rem;
+  max-width: 20rem;
+  width: 100%;
+  min-height: 100%;
+  transition: top 0.5s; 
+  background-color: #fff;
+  border: var(--Burgundy) 2px solid;
+  border-radius: 1.9rem;
+  box-shadow: 0 0 10px rgba(128, 0, 32, 0.6);
+  box-sizing: border-box;
+}
+#form h4 {
+  padding-top: 0.8rem;
+  font-weight: 600;
+  color: var(--Burgundy);
+  text-align: center;
+  font-size: 1.5rem; 
+  text-decoration: underline;
+}
+#form .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+#form .input-wrapper .input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+#form .input-wrapper .input-container label {
+  font-size: 1rem; 
+  font-weight: 600;
+}
+#form .input-wrapper .input-container input {
+  height: 2.8rem !important;
+  width: 100%;
+  border-radius: 0.7rem;
+  border: 0.8px #dce5c9 solid;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+#form .input-wrapper #form-btn {
+  margin-top: 0.3rem;
+  height: 2.8rem !important;
+  background-color: var(--Burgundy);
+  border-radius: 0.7rem;
+  color: var(--textforburgundy);
+  border: none;
+}
+
+#form .log-in-container {
+  display: flex;
+  padding-top: 0.7rem;
+  justify-content: center;
+}
+
+#form .log-in-container p {
+  margin-right: 0.3rem;
+}
+#form .log-in-container a {
+  text-decoration: none;
+  color: var(--Burgundy);
+  font-weight: 600;
+}
+
+#form .log-in-container a:hover {
+  color: var(--bgColorTwo);
+}
+#form {
+  display: none;
+}
+
+#form.open {
+  display: block;
+  top: 0;
+}
+.comment-pop-up{
+  margin:2rem 4rem;
+  color: var(--Burgundy);
+}
+.popup-content{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+.popup-content p{
+  font-size: 1.146rem;
+}
+.popup-content button{
+  height: 3.5rem;
+  width: 12rem ;
+  font-weight: 700;
+  background-color: var(--textforburgundy);
+  color: var(--Burgundy);
+  border-radius: 2.5rem;
+  padding:1rem 0.6rem;
+  border: none;
+}

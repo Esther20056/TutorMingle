@@ -1,0 +1,345 @@
+@media (min-width: 0px) and (max-width: 576px) {
+    .banner .carousel-inner .carousel-body{
+        position: absolute;
+        top: 45%;
+        font-size: 1.1rem;
+        margin:0 5% 0 5%;
+    }
+    .banner .carousel-inner .carousel-body .what-to-learn{
+        display: none !important;
+    }
+    .banner .carousel-inner .carousel-body .form-container input, .btn{
+       display: none !important;
+    }
+    .banner .carousel .slide-btn{
+        margin:40% 2% 0 2%;
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+    .first-content-container .wrapper{
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+    }
+    .first-content-container button{
+        width: 45vw !important;
+        margin:0 20% 0 20% !important;
+        height: 3.5rem !important;
+    }
+    .first-content-container button a{
+        font-size: 0.9rem !important;
+    }
+    .second-content-container {
+      display: none;
+    }    
+.second-content-wrapper .first-content{
+display: block;
+}
+.third-content-container .wrapper{
+  display: none;
+}
+.third-content-container .wrapper-two{
+    display: block;
+}
+.third-content-container h2{
+    font-size: 1.1rem;
+    word-wrap: none;
+}
+.third-content-container p{
+    font-size: 1rem;
+}
+.third-content-container .text-container{
+    width:96vw;
+    margin: 0;
+}
+.third-content-container  .img-container {
+    max-width: 100%;
+    max-height: 50%;
+    margin-top: 2rem;
+}
+.third-content-container .wrapper-two .img-container .img-slide {
+    max-width: 100% !important;
+    max-height: 49%;
+    border-radius: 2rem;
+}
+.third-content-container{
+    margin:15% 2%;
+}
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    .banner .carousel-inner .carousel-body{
+        position: absolute;
+        top: 35%;
+        font-size: 1.124rem;
+        margin:0 5% 0 5%;
+    }
+    .banner .carousel-inner .carousel-body .what-to-learn{
+        font-size: 1.2rem;
+    }
+    .banner .carousel-inner .carousel-body .form-container{
+        margin-top: -0.6rem;
+    }
+    .banner .carousel-inner .carousel-body .form-container input{
+        min-width: 50vw;
+        height: 2rem;
+        margin-left: -7%;
+        font-size: 1rem;
+    }
+    .banner .carousel-inner .carousel-body .form-container button{
+    min-width: 35%;
+    font-size: 1rem;
+    height: 3.3rem;
+    }
+    .banner .carousel .slide-btn{
+        margin:35% 2% 0 2%;
+        width: 2.4rem !important;
+        height: 2.4rem !important;
+    }
+    .first-content-container .wrapper{
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+    }
+    .first-content-container button{
+        width: 35% !important;
+        margin:0 30% 0 30% !important;
+        height: 3.5rem !important;
+    }
+    .second-content-container {
+      display: none;
+    }    
+.second-content-wrapper .first-content{
+display: block;
+}
+.second-content-wrapper .first-content{
+    max-width: 70%;
+    min-height: 50%;
+    margin:15%;
+}
+.third-content-container .wrapper{
+  display: none;
+}
+.third-content-container .wrapper-two{
+    display: block;
+}
+.third-content-container h2{
+    font-size: 1.3rem;
+    word-wrap: none;
+}
+.third-content-container p{
+    font-size: 1rem;
+}
+.third-content-container .text-container{
+    width:80vw;
+    margin:0 8%;
+}
+.third-content-container  .img-container {
+    max-width: 100%;
+    max-height: 50%;
+    margin-top: 2rem;
+}
+.third-content-container .wrapper-two .img-container .img-slide {
+    max-width: 100% !important;
+    max-height: 49%;
+    border-radius: 2rem;
+}
+.third-content-container{
+    margin:15% 2%;
+}
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .banner .carousel-inner .carousel-body{
+        position: absolute;
+        top: 35%;
+        font-size: 1.4rem;
+        margin:0 5% 0 5%;
+    }
+    .banner .carousel-inner .carousel-body .what-to-learn{
+        font-size: 1.3rem;
+    }
+    .banner .carousel-inner .carousel-body .form-container input{
+        min-width: 50vw;
+        margin-left: -7%;
+       font-size: 1rem;
+    }
+    .banner .carousel-inner .carousel-body .form-container button{
+    min-width: 35%;
+    font-size: 1rem;
+    }
+    .banner .carousel .slide-btn{
+        margin:30% 2% 0 2%;
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+    }
+    .first-content-container .wrapper{
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+    }
+    .first-content-container button{
+        width: 30% !important;
+        height: 3.5rem !important;
+        margin:0 35% 0 35% !important;
+    }
+    .second-content-container {
+      display: none;
+    }    
+.second-content-wrapper .first-content{
+display: block;
+}
+.second-content-wrapper .first-content{
+    max-width: 55%;
+    min-height: 55%;
+    margin:15% 22.5%;
+}
+.second-content-wrapper .first-content .heaader-text{
+    font-size: 1.4rem;
+}
+.third-content-container .wrapper{
+  display: none;
+}
+.third-content-container .wrapper-two{
+    display: block;
+}
+.third-content-container h2{
+    font-size: 1.5rem;
+}
+.third-content-container p{
+    font-size: 1.2rem;
+}
+.third-content-container .text-container{
+    width:80vw;
+    margin:0 8%;
+}
+.third-content-container  .img-container {
+    max-width: 80%;
+    max-height: 40%;
+    margin:2rem 10%;
+}
+.third-content-container .wrapper-two .img-container .img-slide {
+    max-width: 100% !important;
+    max-height: 49%;
+    border-radius: 2rem;
+}
+.third-content-container{
+    margin:15% 2%;
+}
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+    .banner .carousel-inner .carousel-body{
+        position: absolute;
+        top: 33%;
+        font-size: 1.7rem;
+        margin:0 5% 0 5%;
+    }
+    .banner .carousel-inner .carousel-body .what-to-learn{
+        font-size: 1.5rem;
+    }
+    .banner .carousel-inner .carousel-body .form-container input{
+        min-width: 50vw;
+        margin-left: -7%;
+       font-size: 1rem;
+    }
+    .banner .carousel-inner .carousel-body .form-container button{
+    min-width: 35%;
+    font-size: 1rem;
+    }
+    .first-content-container .header-text{
+        font-size: 1.8rem !important;
+    }
+    .first-content-container .wrapper{
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+    }
+    .first-content-container .wrapper .first-content h2{
+        margin-top: 0rem !important;
+    }
+    .first-content-container button{
+        width: 22% !important;
+        height: 3.5rem !important;
+        margin:0 35% 0 35% !important;
+    }
+    .second-content-container {
+      display: none;
+    }    
+.second-content-wrapper .first-content{
+display: block;
+}
+.second-content-wrapper .first-content{
+    max-width: 50%;
+    min-height: 60%;
+    margin:18% 22.5%;
+}
+.second-content-wrapper .first-content .heaader-text{
+    font-size: 1.5rem;
+}
+.third-content-container{
+    margin:6rem 2rem 4rem 2rem;
+}
+.third-content-container .wrapper{
+    gap: 2rem;
+}
+.third-content-container .wrapper-two{
+    display: none;
+}
+.third-content-container .text-container .accordion button{
+    min-width: 45vw;
+   }
+.third-content-container .wrapper .img-container {
+    min-width: 45vw;
+    min-height: 22rem;
+    margin-top: 1.5rem;
+}
+.third-content-container .wrapper .img-container .img-slide {
+    max-width: 100%!important;
+    min-height: 100% !important;
+}
+.third-content-container h2{
+    font-size: 1.5rem;
+}
+.third-content-container p{
+    font-size: 1.2rem;
+}
+}
+@media (min-width: 1200px) and (max-width: 1365px) {
+    .second-content-container .first-content{
+        top: 85rem;
+        max-width: 40%;
+    }
+    .banner .carousel-inner .carousel-body{
+        position: absolute;
+        top: 40%;
+        font-size: 2rem;
+        margin:0 5% 0 5%;
+    }
+        .banner .carousel-inner .carousel-body .form-container input{
+            min-width: 40vw;
+           font-size: 1.2rem;
+        }
+        .banner .carousel-inner .carousel-body .form-container button{
+        min-width: 35%;
+        font-size: 1rem;
+        }
+        .first-content-container button{
+            width: 22% !important;
+            height: 3.5rem !important;
+            margin:0 35% 0 35% !important;
+        }
+        .banner .carousel-inner .carousel-item img{
+            max-height: 100%;
+            padding-top: 4.5rem;
+        }
+    .second-content-wrapper .first-content{
+        max-width: 50%;
+        min-height: 60%;
+        margin:18% 22.5%;
+    }
+    .second-content-wrapper .first-content .heaader-text{
+        font-size: 1.5rem;
+    }
+    .third-content-container{
+        margin:6rem 2rem 4rem 2rem;
+    }
+    .second-content-container .first-content{
+        position: absolute;
+        top:97.5rem;
+    }
+    }
+

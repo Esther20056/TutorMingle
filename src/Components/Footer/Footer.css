@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bgColorTwo); 
+    color: var(--textforburgundy); 
+  } 
+  .waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    overflow: hidden;
+    height: 100%;
+    background-image: linear-gradient(to right, #4f8cf6, #2976aa, #5c74fb);
+    animation: waveAnimation 10s ease-in-out infinite;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+        display: flex;
+        padding:4rem;
+        gap: 3rem;
+        font-size:1.16rem;;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+.footer-container .short-writeup .logo, .logo span{
+    color: var(--Burgundy);
+    font-family: 'Didot', serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.9px;
+}
+.footer-container .short-writeup .logo span{
+    color: var(--Sage-Green);
+}
+
+.footer-container a,.p{
+    color:var(--textforburgundy);
+    display: block;
+    padding-bottom:0.8rem;
+    text-decoration: none;
+}
+.footer-container a:hover,.p:hover, .quick-link-wrapper:hover{
+    color: var(--Burgundy);
+}
+.footer-container .short-writeup {
+flex-basis: 35%;
+}
+.footer-container .address{
+    flex-basis: 20%;
+}
+.footer-container .company{
+    flex-basis: 15%;
+}
+.footer-container .uick-links{
+    flex-basis: 20%;
+}
+.quick-link-wrapper .icon{
+    font-size: 0.8rem;
+    margin-bottom: 6%;
+} 
+  @keyframes waveAnimation {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(-2.2rem);
+    }
+    100% {
+      transform: translateX(-100%) translateY(0);
+    }
+  }
+
+  @media (min-width: 0px) and (max-width: 576px) {
+    .content {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding:4rem 2rem; 
+    }
+  }
+  @media (min-width: 576px) and (max-width: 992px) {
+    .content {
+      display: grid;
+      grid-template-columns:1fr 1fr;
+      padding:4rem 2rem; 
+    }
+  }
+  
+  

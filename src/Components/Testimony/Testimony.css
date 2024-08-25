@@ -1,0 +1,119 @@
+
+.tutors-testimony {
+  padding:2rem 0;
+  background-color: #FFF8DC;
+}
+.tutors-testimony-container{
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.tutors-testimony h2 {
+  font-size: 2rem;
+  color: #800020;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.tutors-testimony p {
+  font-size: 1.1rem;
+  color: #778899; 
+  text-align: center;
+}
+.testimony_wrapper{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+  background: #FFF; 
+  padding:1.3rem 2rem;
+  border-radius:2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -4px 8px rgba(0, 0, 0, 0.1), 4px 0 8px rgba(0, 0, 0, 0.1), -4px 0 8px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.swiper-slide:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-image {
+  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+  margin-bottom: 1.2rem;
+  border: 3px solid #9ACD32; 
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.testimonial-image:hover {
+  border-color: #800020;
+  transform: scale(1.1);
+}
+
+.subject-name-container {
+  margin-bottom: 15px;
+}
+
+.testimony_wrapper h3 {
+  font-size: 1.5rem;
+  color: #800020;
+}
+.testimony_wrapper h4 {
+  font-size: 1.1rem;
+  color: #778899; 
+}
+.rating_stars i {
+  color: #FFD700; 
+  margin: 0 2px;
+}
+.swiper-pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background: #9ACD32; 
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 1;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: #800020;
+  transform: scale(1.5);
+}
+
+.bi-quote {
+  color: #800020;
+  font-size: 1.5rem;
+}
+
+.bi-quote.right-icon {
+  display: inline-block;
+  left:-5px;
+  position:  relative;
+}
+
+.bi-quote.left-icon {
+  display: inline-block;
+  position: relative;
+  right: -5px;
+  transform: scale(-1, -1);
+}
+@media (min-width: 0px) and (max-width: 475px) {
+  .testimony_wrapper{
+    display: block;
+  }
+  .testimonial-image {
+    margin:0 20% 2rem 20%;
+  }
+}

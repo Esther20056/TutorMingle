@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.terms-wrapper{
+    background-color: #FFF8DC;
+    padding-top: 7%;
+}
+.terms_and_condition_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+    padding:1% 10% 10% 10%;
+}
+.terms-wrapper .terms-header-text{
+    font-size: 1.6rem;
+    text-decoration: underline;
+    color: var(--Sage-Green);
+}
+.terms-wrapper #term-welcome-text{
+    font-size: 1.3rem;  
+    padding-bottom: 2%;  
+}
+#navbar-brand, #navbar-brand span{
+    color: var(--Burgundy);
+    font-family: 'Didot', serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.9px;
+}
+#navbar-brand span{
+    color: var(--Sage-Green);
+}
+.terms-wrapper h5{
+    font-size: 1.4rem; 
+    text-decoration: underline;
+    font-weight: 600;
+}
+.terms-wrapper p{
+   font-size: 1.25rem;
+}
+@media (min-width: 0px) and (max-width: 568px){
+    .terms-wrapper{
+        padding-top: 5rem;
+    }
+}
+@media (min-width: 568px) and (max-width: 762px){
+    .terms-wrapper{
+        padding-top: 5rem;
+    }
+}
+@media (min-width: 762px) and (max-width: 992px){
+    .terms-wrapper{
+        padding-top: 5rem;
+    }
+}

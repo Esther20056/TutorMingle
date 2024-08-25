@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.burgundy{
+    background: linear-gradient(to top, #e8e2c9, #e6dbaf, #d0b857, #FFF8DC);}
+.cream{
+    background: linear-gradient(to top, #d996a7, #a3485f, #800020, #db8399);}  
+   
+.step2-mainwrapper{
+    padding-top: 5rem;
+    margin-bottom: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.step2-mainwrapper form p{
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 2%;
+}
+.step2-mainwrapper .step2-second-inner-wrapper-form, .step2-first-inner-wrapper-form{
+    background-color: var(--Burgundy);
+    padding:5rem 8%;
+    margin:9rem 0;
+    min-width: 50vw;
+    color:var(--textforburgundy) ;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;    
+}
+.step2-mainwrapper .step2-first-inner-wrapper-form{
+    background-color: var(--textforburgundy);
+    padding:5rem 8%;
+    margin:9rem 0;
+    min-width: 50vw;
+    color:var(--Burgundy) ;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;    
+}
+.form .form-input{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.form  label{
+    font-size: 1.13rem;
+}
+.form .form-input input::placeholder, textarea::placeholder{
+    color: #000;
+}
+.form .form-input input, select, textarea{
+    width: 100% !important;
+    height: 3.5rem !important;
+    border-radius: 0.7rem;
+    outline: none;
+    font-size: 1.2rem;
+    border: 1px solid var(--Burgundy) !important;
+    padding:1rem ;
+    overflow: hidden;
+}
+.form textarea{
+    overflow: hidden;
+}
+select option{
+    background-color: var(--Burgundy);
+    color: var(--textforburgundy);
+    font-size: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+.step2-mainwrapper .form button a{
+    color: var(--Burgundy)!important;
+    font-weight: 300 !important;
+}
+.step2-mainwrapper .form button{
+    background-color: var(--textforburgundy);
+    color: var(--Burgundy);    
+    border: none;
+    border-radius: 0.7rem;
+    padding:1rem 0;
+    font-size: 1.3rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
+    margin-top: 1.5rem;
+}
+.form-inputs .header-label{
+    padding-bottom: 1rem;
+}
+.form-inputs .lesson-days-main-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+.form-inputs .lesson-days-wrapper input{
+    width: 1.6rem !important;
+    height: 1.6rem !important;
+}
+.form-inputs .lesson-days-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.step2-second-inner-wrapper-form .redirect-text{
+    font-size: 1.2rem;
+}
+button:hover {
+    background-color: darken(var(--Burgundy), 10%);
+}
+.alert {
+    margin-top: -6rem;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    max-width: 80%;
+    text-align: center;
+}
+.alert button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+@media (max-width: 568px) {
+    .step2-mainwrapper{
+        padding:3rem 1rem 0 1rem;
+    }
+    .step2-second-inner-wrapper-form .redirect-text{
+        font-size: 1rem;
+    }
+    .form-inputs .lesson-days-main-wrapper {
+        grid-template-columns: 1fr; 
+        margin-left: 13rem;
+    }
+    .form-inputs .lesson-days-wrapper input{
+        margin-right: -3rem;
+    }
+}
+@media (min-width: 568px) and (max-width: 768px) {
+    .step2-mainwrapper{
+        padding:3rem 2rem 0 2rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .step2-mainwrapper{
+        padding:3rem 2rem 0 2rem;
+    }
+    .step2-mainwrapper .step2-second-inner-wrapper-form, .step2-first-inner-wrapper-form{
+        max-width: 70vw;
+    }
+}

@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.login-main-container{
+    padding-top: 6rem;
+    max-width: 100vw;
+    min-height:100vh ;
+    background-image: url(../../Images/background-2660437_1280.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-main-container  .form{
+ display: flex;
+ flex-direction: column;
+ gap: 2.5rem;
+ padding:4rem 0;
+}
+
+.login-input-container label{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--textforburgundy);
+}
+ .login-input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+ .login-input-container input, #button{
+    width: 40vw;
+    height: 3.5rem;
+    border-radius: 0.7rem;
+    border:none;
+    padding: 0 1rem;
+   outline: none;
+   font-size: 1.3rem;
+}
+#button{
+    background-color: var(--bgColorTwo);
+    color: var(--Burgundy);
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+ .login-input-container input::placeholder{
+    font-size: 1rem;
+}
+.error-message{
+    color: var(--textforburgundy);
+}
+.password-container {
+    position: relative;
+  }
+  
+  .password-visibility-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+@media (min-width: 0) and (max-width: 568px){
+    #button{
+        width: 80vw;
+    }  
+}
+@media (min-width: 567px) and (max-width: 756px) {
+    #button{
+        width: 70vw;
+    }  
+}
+@media (min-width: 757px) and (max-width: 992px) {
+    #button{
+        width: 60vw;
+    }  
+}

@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.tutor-page{
+padding:7rem 0;
+background-color: #fbfaf7;
+min-height: 100%;
+}
+.tutor-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.search-form{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.search input, .search select, .search button{
+    width: 14rem !important;
+    border-radius: 1rem;
+    background-color: transparent;
+}
+.search .search-form button{
+    border: 4px groove var(--Burgundy);
+}
+.tutor-page .header-text{
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0% 0 0% 4%;
+    background:linear-gradient(to right, var(--Burgundy), var(--Sage-Green), var(--Burgundy)) ;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .tutor-main-inner-container{
+    width: 23rem; 
+    height: 26rem;
+    background-color: #de7d95;
+    border-radius: 1rem;
+    box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.8);
+    margin:3rem 4rem;
+  }
+  .tutor-first-inner-container{
+    display: flex;
+    gap: 1.5rem;
+    width: 23rem; 
+    height: 10rem;
+    background:linear-gradient(to top, #de7d95, #FFF8DC, #e97e99);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding:1.2rem;
+  }
+  .tutor-second-inner-container{
+    padding:0 1.2rem;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .tutor-second-inner-container .bold{
+     color:#a90a32;
+     font-size: 1.03rem;
+  }
+  .tutor  a img{
+    width: 6rem;
+    height: 6rem; 
+    border-radius: 50%;
+    object-fit: cover;
+  } 
+  .tutor-text-container{
+    margin-top: 5%;
+  }
+  .tutor-text-container .name{
+     font-size: 1.5rem;
+     color: #a90a32;
+     margin-bottom: -0.7%;
+  }
+  .tutor-text-container .landmark, .tutor-text-container .location{
+    font-weight: 600;
+ 
+  } 
+  .tutor-text-container .location{
+    margin-bottom: -0.7%;
+  }
+  .tutor-description {
+    font-size: 14px;
+    color: #666;
+  }
+
+  @media (min-width: 0px) and (max-width: 568px){
+    .tutor-main-inner-container{
+      margin:auto;
+      margin-top: 2rem;
+    }
+    .tutor-list{
+      grid-template-columns:1fr;
+    }
+    .tutor-main-inner-container{
+      width: 20rem; 
+    }
+    .tutor-first-inner-container{
+      width: 20rem;
+    } 
+    .search .search-form{
+      gap: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .search input, .search select, .search button{
+      width: 10rem !important;
+  }
+    .search .search-form button{
+    min-height:3rem;
+  }
+  }
+  @media (min-width: 568px) and (max-width: 768px){
+    .tutor-main-inner-container{
+      margin:auto;
+      margin-top: 2rem;
+    }
+    .tutor-list{
+      grid-template-columns:1fr ;
+    }
+    .search .search-form{
+      gap: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .search input, .search select, .search button{
+      width: 10rem !important;
+  }
+    .search .search-form button{
+    min-height:3rem;
+  }
+  }
+  @media (min-width: 768px) and (max-width: 1066px){
+    .tutor-main-inner-container{
+      margin:auto;
+      margin-top: 2rem;
+    }
+    .tutor-list{
+      grid-template-columns:1fr 1fr;
+    }
+    .tutor-main-inner-container{
+      width: 21.5rem; 
+    }
+    .tutor-first-inner-container{
+      width: 21.5rem;
+    } 
+    .search .search-form{
+      gap: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .search .search-form button{
+    min-height:3rem;
+  }
+  }
+  @media (min-width: 1066px){
+    .tutor-main-inner-container{
+      margin:auto;
+      margin-top: 2rem;
+    }
+    .tutor-list{
+      grid-template-columns:1fr 1fr 1fr;
+    }
+    .search input, .search select, .search button{
+      width: 12rem !important;
+  }
+    .search .search-form{
+      gap: 1rem;
+    }
+    .search .search-form button{
+    min-height:3rem;
+  }
+  .tutor-main-inner-container{
+    width: 21.5rem; 
+  }
+  .tutor-first-inner-container{
+    width: 21.5rem;
+  } 
+  }
+
+
+

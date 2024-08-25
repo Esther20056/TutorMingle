@@ -1,0 +1,94 @@
+@media (max-width: 568px){
+    .signup {
+        margin:-2rem 0% 0rem 0%;
+    }
+    .main_Wrapper {
+        padding-top: 5rem;
+    }
+    .signup h4 {
+        font-size: 1.3rem;
+    }
+    .signup p{
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+    .signup_container {
+        gap: 3rem;
+    }
+.signup_container input,
+select, textarea,
+.button {
+    width: 70vw !important;
+    padding:1.5%;
+    gap: 0;
+}
+.gender input[type="radio"] {
+    width: 4rem !important;
+    height: 3.5rem;
+}
+.signup_container select{
+    width: 95% !important;
+}
+input::placeholder{
+    font-size: 0.9rem;
+}
+.currency-prefix {
+    font-size: 14px;
+}
+.input-with-prefix input {
+    padding-left: 1.9rem;
+}
+
+.form-input-container, .gender-container{
+    padding:0 2% 0 1%;
+}
+.gender-container .gender-input-container{
+    gap: 2rem;
+}
+.gender-container .gender-input-container .gender{ margin-bottom: 1rem;}
+.lesson-days-main-wrapper{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+.lesson-days-wrapper{
+    gap: 0rem;
+    margin-left: -5rem;
+}
+.lesson-days-wrapper label{
+    margin-left: -6rem;
+}
+.work_container{
+    gap: 0.6rem;
+}
+.agreement .check-box {
+    width: 4rem !important;
+    height: 4rem !important;
+    margin-bottom: -1rem;
+    margin-left: 1rem;
+}
+
+.work_container .work_experience{
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+}
+
+}
+@media (min-width: 425px) and (max-width: 568px){
+    .gender input[type="radio"] {
+        width: 5.5rem !important;
+        height: 3.5rem;
+    }
+}
+@media (min-width: 569px) and (max-width: 768px){
+    input::placeholder{
+        font-size: 1rem;
+    }
+    .gender-container .gender-input-container{
+        gap: 2.5rem;
+    }
+    .work_container .work_experience{
+        min-width: 1.5rem;
+        min-height: 1.5rem;
+    }
+}

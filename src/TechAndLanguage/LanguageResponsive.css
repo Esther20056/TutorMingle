@@ -1,0 +1,47 @@
+@media (min-width:0px) and (max-width:576px) {
+    .language-wrapper {
+        flex-basis: 100%;   
+    }
+    .language-inner-wrapper{
+        width: 90%; 
+    }
+    .language-wrapper-two {
+    display: none;
+    }
+    .language-wrapper-two .language-wrapper-two-inner p{
+        font-size: 1.056rem;
+    }
+}
+@media (min-width:0px) and (max-width:572px){
+    .lesson-days-main-wrapper{
+        display:grid;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        margin-left: 12rem;
+    }
+    .lesson-days-wrapper{
+        gap: 0rem;
+        margin-left: -5rem;
+    }
+    .lesson-days-wrapper label{
+        margin-left: -9rem;
+    } 
+}
+@media (min-width:576px) and (max-width:768px) {
+    .language-wrapper {
+        flex-basis: 100%;   
+    }
+    .language-inner-wrapper{
+        width: 70%; 
+    }
+    .language-wrapper-two {
+    display: none;
+    }
+}
+@media (min-width:768px) and (max-width:992px) {
+    .language-inner-wrapper{
+        width: 90%; 
+    }
+
+}
+

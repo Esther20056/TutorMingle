@@ -1,0 +1,30 @@
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #778899; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  } 
+  .splash-screen img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .welcome-text {
+    font-family: 'Didot', serif; 
+    font-size: 1.2rem;
+    color: #FFF8DC; 
+    letter-spacing: 0.9px;
+  }
+  
+@media (min-width: 0px) and (max-width: 1359px) {
+  .splash-screen {
+     padding-top: 4rem
+    };
+}  

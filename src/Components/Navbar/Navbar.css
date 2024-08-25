@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didot:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+--textforburgundy:#FFF8DC;
+--Burgundy: #800020;
+--Sage-Green: #9ACD32;
+--bgColorTwo:#778899;
+}
+.Menu{
+    background-color:var(--bgColorTwo);
+    padding:1.3rem  3.5rem;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    max-height:5rem;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.Menu .navbar-brand, .navbar-brand span{
+    color: var(--Burgundy);
+    font-family: 'Didot', serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.9px;
+}
+.Menu .navbar-brand span{
+    color: var(--Sage-Green);
+}
+.Menu .links-container #nav-menu li{
+    display: inline-block;
+    font-size: 1.1rem;
+    background-color: var(--Burgundy);
+    margin-left: 2rem;
+    font-weight: 600;
+    padding: 0.5rem 0.9rem;
+}
+.Menu .links-container #nav-menu li a{
+    color:#F5F5DC;
+    text-decoration: none;
+}
+.Menu .links-container #nav-menu li:active,
+.Menu .links-container #nav-menu li:hover{
+    background-color: var(--Sage-Green);
+} 
+
+.Menu .hamburger{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3.5rem;
+    height: 3rem;
+    position: absolute;
+    border: #c81643 5px groove;
+    border-radius: 0.4rem;
+    right: 0.9rem;
+    bottom: 0.01rem;
+    margin:3rem 2rem 0.8rem 2rem;
+    
+}
+.Menu .hamburger span{
+    background-color: var(--Sage-Green);
+    width: 2rem;
+    height: 4px;
+    margin: auto;
+    padding-top: -0.4rem;
+    border-radius: 0.4rem;
+}
+
+@media (max-width: 900px) {
+.Menu{
+   max-width:100%;
+   max-height: 100%;
+}
+ .Menu .hamburger{
+    display: flex;
+ }
+ .Menu #nav-menu.open{
+    display: flex;
+    justify-content: center;
+    margin-left: -10rem;
+    margin-top: 3rem;
+    gap: 0.4rem;
+    padding:0 0.3rem ;  
+ }
+.links-container  #nav-menu{
+    display: none;
+    flex-direction: column;
+ }
+
+}
+@media (min-width: 901px) {
+    .Menu{
+        background-color:var(--bgColorTwo);
+        /* padding:1.3rem 2.5rem; */
+    }
+    .Menu .links-container #nav-menu li{
+        margin-left: 1rem;
+    }
+    }

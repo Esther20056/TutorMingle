@@ -1,0 +1,189 @@
+import React, {useState, useEffect }  from 'react'
+import TMSecondBanner from '../../Images/TMSecondBanner.png'
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.css';
+import './HomeEducating.css'
+import { Link, useNavigate} from 'react-router-dom'
+import { BsEye, BsEyeSlash } from 'react-icons/bs';
+import axios from 'axios'
+
+function Homeeducating() {
+    const [passwordVisible, setPasswordVisible] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [password, setPassword] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+      const formatPhoneNumber = (input) => {
+        const cleaned = ('' + input).replace(/\D/g, '');
+        const formatted = cleaned.replace(/(\d{4})(\d{3})(\d{4})/, '$1 $2 $3');
+        setPhoneNumber(formatted);
+      }
+      const handleChange = (e) => {
+        const input = e.target.value;
+        formatPhoneNumber(input);
+      } 
+      const navigate = useNavigate()    
+      const [ModalOpen, setModalOpen] = useState(false)
+  
+    const togglePasswordVisibility = () => {
+        setPasswordVisible(!passwordVisible);
+      };
+    
+    async function handleSubmit(w) {
+        w.preventDefault();
+        let form = new FormData(w.currentTarget);
+        try {
+            await axios.post("http://localhost:8000/first/", form);
+            Swal.fire({
+          icon: 'success',
+          title: 'Success!',
+          text: '🎉 Welcome to TutorMingle! Your account has been successfully created 🎉',
+          customClass: {
+              popup: 'custom-swal-popup',
+              title: 'custom-swal-title',
+              content: 'custom-swal-content',
+              confirmButton: 'custom-swal-confirm',
+              cancelButton: 'custom-swal-cancel',
+              icon: 'custom-swal-icon'
+          }
+      }).then(() => {
+        navigate("/tech");
+      });
+  } catch (err) {
+      if (err?.response?.data) {
+          Swal.fire({
+              icon: 'error',
+              title: 'Error!',
+              text: 'Failed to submit form. Please check your inputs and try again.',
+          });
+      } else {
+          Swal.fire({
+              icon: 'error',
+              title: 'Error!',
+              text: 'Something went wrong. Please try again later.',
+          });
+      }
+  } finally {
+      setLoading(false);
+  }
+    }
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get('http://localhost:8000/teacherdetails/1'); // Replace 1 with the actual ID you want to fetch
+          setData(response.data);
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      };
+  
+      fetchData();
+    }, []); 
+  return (
+    <div className='home-educating-container'>
+       {/* banner starts here */}
+        <div id="carouselId" className="carousel home-educating-slider" data-bs-ride="carousel">
+                <div className="carousel-inner" role="listbox">
+                    <div className="carousel-item active d-flex align-items-center">
+                        <img
+                            src={TMSecondBanner}
+                            className="w-100 d-block"
+                            alt="First slide"
+                        />
+                        <div className="carousel-body text-start">
+                            <p>Tailored homeschooling that empowers your children to excel in exams, enhances their self-assurance, and achieves higher academic results</p>
+                            <button onClick={() => setModalOpen(!ModalOpen)}>Get a home educator</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        {/* banner ends here */}
+         {/* first-content starts here */}
+         <div className="first-content-container">
+            <h2 className="header-text">Your perfect instructor awaits.</h2>
+            <h5 className='header-text-two'>TutorMingle simplifies learning by connecting you with the ideal instructor, managing bookings, and facilitating ongoing communication, so you can focus on mastering your interests without the hassle of logistics.</h5>
+            <div className="wrapper">
+                <div className="first-content">
+                    <h2>1</h2>
+                    <div className="container">
+                        <p className="f-p">Let us know where you need support and guidance</p>
+                        <p>Link up with professionals proficient in various academic fields and technology.</p>
+                    </div>
+                </div>
+                <div className="first-content">
+                    <h2>2</h2>
+                    <div className="container">
+                        <p className="f-p">Choose The Educator You Want</p>
+                        <p>Search online for a educators with the right qualifications, availability and hourly rates.</p>
+                    </div>
+                </div>
+                <div className="first-content">
+                    <h2>3</h2>
+                    <div className="container">
+                        <p className="f-p">Schedule your session</p>
+                        <p>Tell your educator when you’d like to meet, and only pay for the time you need.</p>
+                    </div>
+                </div>
+                
+            </div>
+            <button onClick={() => setModalOpen(!ModalOpen)}>Get started</button>
+          </div>
+          {/* first-content ends here */}
+          <form action="" className={ModalOpen ? 'open' : ""} id="form" onSubmit={(w) => handleSubmit(w)}>
+                <h4>Register here</h4>
+                <div className="input-wrapper">
+                    <div className="input-container">
+                        <label htmlFor="">Email</label>
+                        <input type="email" name='email' placeholder='you@youremail.com' />
+                    </div>
+                    <div className="input-container">
+                      <label htmlFor="">Phone</label>
+                      <input type="text" id="phoneNumber" name="phone" value={phoneNumber} onChange={handleChange} placeholder="Enter phone number" maxLength={13} />
+                    </div>
+                    <div className="input-container">
+                        <label htmlFor="">Password</label>
+                        <div style={{ position: 'relative' }}>
+        <input
+          type={passwordVisible ? 'text' : 'password'}
+          value={password}
+          name='password'
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        {passwordVisible ? (
+          <BsEyeSlash
+            onClick={togglePasswordVisibility}
+            style={{
+              position: 'absolute',
+              right: '10px',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              cursor: 'pointer',
+            }}
+          />
+        ) : (<BsEye
+            onClick={togglePasswordVisibility}
+            style={{
+              position: 'absolute',
+              right: '10px',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              cursor: 'pointer',
+            }}
+          />
+        )}
+      </div>
+                    </div>
+                    <button id='form-btn' style={{ fontWeight: "600" }} type='submit'>Register</button>
+                    <button id='form-btn' type="button" style={{ color: "#FFF8DC", fontWeight: "600" }} onClick={() => setModalOpen(false)}>Cancel</button>
+                </div>
+                <div className="log-in-container">
+                    <p>Already have an account?</p>
+                    <Link to="/parents_login">Log In</Link>
+                </div>
+          </form>
+    </div>
+  )
+}
+
+export default Homeeducating

@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.home-educating-container{
+    padding:4% 0 5rem 0 ;
+}
+.home-educating-slider img{
+    max-height: 98vh;
+    object-fit: cover;
+}
+.home-educating-slider .carousel-inner .carousel-body{
+    position: absolute;
+    bottom: 29%;
+    padding: 0 20%;
+    text-align: center;
+    color: var(--textforburgundy); 
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .home-educating-slider .carousel-inner .carousel-body p{
+      font-size: 1.5rem;
+  }
+.home-educating-slider .carousel-inner .carousel-body button{
+      width:32% ;
+      height: 3.5rem;
+      font-weight: 600;
+      font-size: 1.5rem;
+      background-color: transparent;
+      color: var(--textforburgundy);
+      border-top:4px solid var(--textforburgundy);
+      border-bottom:4px solid var(--textforburgundy);
+      border-left: none;
+      border-right: none;
+  }
+.first-content-container  .header-text-two{
+    text-align: center;
+    padding:0 8%;
+}
+
+@media (min-width: 0)  and (max-width: 372px){
+    .home-educating-slider .carousel-inner .carousel-body{
+        position: absolute;
+        top: 22%;
+        padding:0 3%;
+    }
+    .home-educating-slider img{
+        max-height: 30rem;
+    }
+    .home-educating-container{
+        padding:19% 0 0 0 ;
+    }
+    .home-educating-slider .carousel-inner .carousel-body button{
+        width:45% ;
+        height: 2rem;
+        font-size: 4vw;
+    }
+    .first-content-container .header-text{
+        font-size: 1.4rem;
+    }
+    .first-content-container .header-text-two{
+        font-size: 1.1rem;
+    }
+    .home-educating-slider .carousel-inner .carousel-body p{
+        font-size: 4.2vw;
+    }
+}
+@media (min-width: 372px)  and (max-width: 470px){
+    .home-educating-slider .carousel-inner .carousel-body{
+        position: absolute;
+        top: 9vh;
+        padding:0 3%;
+    }
+    .home-educating-slider img{
+        max-height: 40rem;
+    }
+    .home-educating-container{
+        padding:4.6rem 0 0 0 ;
+    }
+    .home-educating-slider .carousel-inner .carousel-body button{
+        width:44%;
+        height: 2.5rem;
+        font-size: 4vw;
+    }
+    .first-content-container .header-text{
+        font-size: 1.6rem;
+    }
+    .first-content-container .header-text-two{
+        font-size: 1.2rem;
+    }
+    .home-educating-slider .carousel-inner .carousel-body p{
+        font-size: 1rem;
+    }
+}
+@media (min-width: 470px)  and (max-width: 568px){
+    .home-educating-slider .carousel-inner .carousel-body{
+        position: absolute;
+        top: 18vh;
+        padding:0 2rem;
+    }
+    .home-educating-slider img{
+        max-height: 40rem;
+    }
+    .home-educating-container{
+        padding:4.6rem 0 0 0;
+    }
+    .home-educating-slider .carousel-inner .carousel-body button{
+        width:12rem;
+        height: 2.8rem;
+        font-size: 1.2rem;
+    }
+    .first-content-container .header-text{
+        font-size: 1.6rem;
+    }
+    .first-content-container .header-text-two{
+        font-size: 1.2rem;
+    }
+    .home-educating-slider .carousel-inner .carousel-body p{
+        font-size: 3vw;
+    }
+}
+@media (min-width: 568px)  and (max-width: 768px){
+    .home-educating-slider .carousel-inner .carousel-body{
+        position: absolute;
+        top: 23vh;
+        padding:0 2rem;
+    }
+    .home-educating-container{
+        padding:4.6rem 0 0 0;
+    }
+    .home-educating-slider .carousel-inner .carousel-body button{
+        width: 14rem;
+        font-size: 1.3rem;
+        height: 3rem;
+    }
+    .first-content-container .header-text{
+        font-size: 1.6rem;
+    }
+    .first-content-container .header-text-two{
+        font-size: 1.2rem;
+    }
+    .home-educating-slider .carousel-inner .carousel-body p{
+        font-size: 1.3rem;
+    }
+}
+@media (min-width: 768px)  and (max-width: 992px){
+    .home-educating-slider .carousel-inner .carousel-body{
+        position: absolute;
+        top: 34vh;
+        padding:0 1.5rem;
+    }
+    .home-educating-container{
+        padding:4.6rem 0 0 0;
+    }
+    .home-educating-slider .carousel-inner .carousel-body button{
+        width:14rem;
+        height: 3rem;
+        font-size: 1.3rem;
+    }
+    .first-content-container .header-text{
+        font-size: 1.6rem;
+    }
+    .first-content-container .header-text-two{
+        font-size: 1.2rem;
+    }
+    .home-educating-slider .carousel-inner .carousel-body p{
+        font-size: 1.3rem;
+    }
+}
+@media (min-width: 992px)  and (max-width: 1200px){
+    .home-educating-slider .carousel-inner .carousel-body{
+        position: absolute;
+        top:33vh;
+        padding:0 1.5rem;
+    }
+    .home-educating-container{
+        padding:4.6rem 0 0 0;
+    }
+    .home-educating-slider .carousel-inner .carousel-body button{
+        width:14rem;
+        height: 3rem;
+        font-size: 1.4rem;
+    }
+    .first-content-container .header-text{
+        font-size: 1.6rem;
+    }
+    .first-content-container .header-text-two{
+        font-size: 1.2rem;
+    }
+    .home-educating-slider .carousel-inner .carousel-body p{
+        font-size: 1.5rem;
+    }
+}
+@media (min-width: 1200px)  and (max-width: 1359px){
+    .home-educating-slider .carousel-inner .carousel-body{
+        top:36vh;
+        padding:1% 3.5rem;
+    }
+
+    .home-educating-container{
+        padding:6% 0 10% 0;
+    }
+    .home-educating-slider .carousel-inner .carousel-body button{
+        width:14rem;
+        height: 3rem;
+        font-size: 1.4rem;
+    }
+    /* .first-content-container .header-text{
+        font-size: 1.6rem;
+    }
+    .first-content-container .header-text-two{
+        font-size: 1.2rem;
+    } */
+    /* .home-educating-slider .carousel-inner .carousel-body p{
+        font-size: 1.5rem;
+    } */
+}
