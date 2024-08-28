@@ -8,7 +8,7 @@
     .banner .carousel-inner .carousel-body .what-to-learn{
         display: none !important;
     }
-    .banner .carousel-inner .carousel-body .form-container input, .btn{
+    .banner .carousel-inner .carousel-body .form-container input, .form-container button{
        display: none !important;
     }
     .banner .carousel .slide-btn{
@@ -22,7 +22,6 @@
     }
     .first-content-container button{
         width: 45vw !important;
-        margin:0 20% 0 20% !important;
         height: 3.5rem !important;
     }
     .first-content-container button a{
@@ -100,7 +99,6 @@ display: block;
     }
     .first-content-container button{
         width: 35% !important;
-        margin:0 30% 0 30% !important;
         height: 3.5rem !important;
     }
     .second-content-container {
@@ -176,7 +174,6 @@ display: block;
     .first-content-container button{
         width: 30% !important;
         height: 3.5rem !important;
-        margin:0 35% 0 35% !important;
     }
     .second-content-container {
       display: none;
@@ -254,7 +251,6 @@ display: block;
     .first-content-container button{
         width: 22% !important;
         height: 3.5rem !important;
-        margin:0 35% 0 35% !important;
     }
     .second-content-container {
       display: none;
@@ -329,7 +325,6 @@ display: block;
     .second-content-wrapper .first-content{
         max-width: 50%;
         min-height: 60%;
-        margin:18% 22.5%;
     }
     .second-content-wrapper .first-content .heaader-text{
         font-size: 1.5rem;

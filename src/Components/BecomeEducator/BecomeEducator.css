@@ -147,6 +147,11 @@
 }
   .how-to-become-tutor .how-to-become-tutor-wrap{
    flex-basis: 45%;
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   justify-content: center;
+   align-items: center;
   }
   .how-to-become-tutor-wrap .inner-content-wrapper{
     display: flex;
@@ -160,8 +165,10 @@
       font-weight: 600;
       word-wrap: break-word;
   }
+  .how-to-become-tutor-wrap .inner-content-wrapper .content-wrap small{
+    font-size:16px;
+  }
   .how-to-become-tutor-wrap  button{
-    margin-left: 20%;
     background-color: var(--Burgundy);
     width: 15vw;
     height: 10vh;

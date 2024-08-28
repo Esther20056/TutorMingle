@@ -17,52 +17,52 @@ function TutorInfoPage() {
       <img src={tutor.image} alt={tutor.firstName}/>
       <div className="tutorinfopage-inner-wrapper mt-5">
       <p style={{fontSize: '2rem'}}>{tutor.firstName} {tutor.lastName}</p>
-      <div className="about">
-      <p>{tutor.location}</p><p>near</p> 
-      <p>{tutor.landmark}</p>
+      <div className="about d-flex flex-column">
+      <p id='about-p'>{tutor.location}</p>
+      <p id='about-p'><strong style={{fontWeight: '500'}}>Landmark: </strong>{tutor.landmark}</p>
       </div>      
-      <p>Hourly rate: {tutor.rate}</p>
+      <p id='about-p'>Hourly rate: {tutor.rate}</p>
       </div>       
       </div>
-      <div className="about d-flex, flex-column">
+      <div className="about d-flex flex-column">
         <h4>About {tutor.name}</h4>
-      <p>{tutor.about}</p>
+      <p id='about-p'>{tutor.about}</p>
       </div>
-      <div className="about d-flex, flex-column">
+      <div className="about d-flex flex-column">
         <h4>Subjects I teach</h4>
-      <p>{tutor.grade2} {tutor.subject2} {tutor.subject6}</p>
-      <p>{tutor.grade3} {tutor.subject2} {tutor.subject4}</p>
-      <p>{tutor.grade4} {tutor.subject2} {tutor.subject5}</p>
-      <p>{tutor.grade3} {tutor.subject3}</p>
+      <p id='about-p'>{tutor.grade2} {tutor.subject2} {tutor.subject6}</p>
+      <p id='about-p'>{tutor.grade3} {tutor.subject2} {tutor.subject4}</p>
+      <p id='about-p'>{tutor.grade4} {tutor.subject2} {tutor.subject5}</p>
+      <p id='about-p'>{tutor.grade3} {tutor.subject3}</p>
       </div>
-      <div className="about d-flex, flex-column">
+      <div className="about d-flex flex-column">
         <h4>Classes I teach</h4>
-      <p>{tutor.grade}</p>
+      <p id='about-p'>{tutor.grade}</p>
       </div>
-      <div className="about d-flex, flex-column">
+      <div className="about d-flex flex-column">
         <h4>Education</h4>
-      <p>{tutor.education}</p>
-      <p>{tutor.school}</p>
+      <p id='about-p'>{tutor.education}</p>
+      <p id='about-p'>{tutor.school}</p>
       </div>
       <div className="about d-flex, flex-column">
         <h4>Travel policy</h4>
-      <p>{tutor.travel}</p>
-      <p>{tutor.travel2}</p>
+      <p id='about-p'>{tutor.travel}</p>
+      <p id='about-p'>{tutor.travel2}</p>
       </div>
       <div className="about d-flex, flex-column">
         <h4>Mode of classes</h4>
-      <p>{tutor.mode}</p>
-      <p>{tutor.preferred_tool}</p>
+      <p id='about-p'>{tutor.mode}</p>
+      <p id='about-p'>{tutor.preferred_tool}</p>
       </div>
       <div className="about d-flex, flex-column">
         <h4>My availability</h4>
-      <p>Sunday: {tutor.availability2}</p>
-      <p>Monday: {tutor.availability}</p>
-      <p>Tuesday: {tutor.availability}</p>
-      <p>Wednesday: {tutor.availability}</p>
-      <p>Thursday: {tutor.availability2}</p>
-      <p>Friday: {tutor.availability}</p>
-      <p>Saturday: {tutor.availability2}</p>
+      <p id='about-p'>Sunday: {tutor.availability2}</p>
+      <p id='about-p'>Monday: {tutor.availability}</p>
+      <p id='about-p'>Tuesday: {tutor.availability}</p>
+      <p id='about-p'>Wednesday: {tutor.availability}</p>
+      <p id='about-p'>Thursday: {tutor.availability2}</p>
+      <p id='about-p'>Friday: {tutor.availability}</p>
+      <p id='about-p'>Saturday: {tutor.availability2}</p>
       </div>
     </div>
   );

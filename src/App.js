@@ -85,7 +85,7 @@ function App() {
               <Route path='/languagesteptwo' element={<LanguageStepTwo/>} />
               <Route path='/languagestepthree' element={<LanguageStepThree/>} />
               <Route path='/tech_dashboard' element={<TechDashboard />} />
-              <Route path='/educatordashboard/' element={<EducatorsDashboard />} />
+              <Route path='/educatordashboard' element={<EducatorsDashboard />} />
               <Route path='/commentform' element={<CommentForm/>} />
               <Route path='/contactUs' element={<ContactUs/>} />
               <Route path='/whoweare' element={<WhoWeAre/>} />

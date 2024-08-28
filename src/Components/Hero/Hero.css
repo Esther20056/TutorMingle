@@ -77,7 +77,11 @@ border-radius: 1rem;
     font-size: 1.2rem;
 }
 .first-content-container{
-    margin:8% 4%;
+    margin:8rem 2rem 6rem 2rem;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
 }
 .first-content-container .header-text{
     text-align: center;
@@ -89,7 +93,8 @@ border-radius: 1rem;
 .first-content-container .wrapper{
     display: flex;
     gap: 1.5rem;
-    margin: 3rem 0rem;
+   justify-content: center;
+   align-items: center !important;
 }
 .first-content-container .wrapper .first-content{
     display: flex;
@@ -115,13 +120,13 @@ border-radius: 1rem;
      line-height: 1.4rem;
 }
 .first-content-container button{
-    margin: auto;
     background-color: var(--Burgundy);
     width: 15vw;
     height: 10vh;
     border-radius: 2rem;
     border: none;
     outline: none;
+    margin: auto;
 }
 .first-content-container button a{
     font-size: 1rem;

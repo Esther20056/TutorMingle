@@ -1,17 +1,6 @@
 @media (min-width: 0px) and (max-width: 450px) {
-  #form {
-    padding: 0.8rem;
-    margin-top: 5.4rem;
-  }
-  #form .input-wrapper {
-    gap: 0.6rem;
-  }
-  #form h4 {
-    padding-top: 0.3rem;
-    font-size: 1.2rem;
-  }
-  #form .input-wrapper .input-container input{
-    height: 2rem;
+  .how-to-become-tutor-wrap  button{
+    height: 8vh !important;
   }
   .popup-content h2{
     font-size: 1.4rem;
@@ -21,15 +10,6 @@
   }
   .popup-content p{
     font-size: 1.1rem;
-  }
-  #form .input-wrapper .input-container label {
-    display: none;
-  }
-  #form .input-wrapper .input-container input {
-    height: 2rem;
-  }
-  #form .input-wrapper #form-btn {
-    height: 2rem;
   }
   .slider .carousel-inner .carousel-body{
     bottom: 5%;  
@@ -84,38 +64,12 @@
   gap: 1.5rem;
 }
 .how-to-become-tutor-wrap  button{
-  margin:1rem 0 1rem 35vw;
   min-width: 30vw;}
-  .how-to-become-tutor .how-img-container img{
+.how-to-become-tutor .how-img-container img{
     max-width: 90vw;
     min-height: 14rem;
     margin:2% 5vw;
   }
-}
-@media (min-width: 450px) and (max-width: 1200px) {
-  #form {
-    padding:0.8rem 1.2rem;
-    margin-top: 5.2rem;
-  }
-  #form .input-wrapper {
-    gap: 0.5rem;
-  }
-  #form h4 {
-    font-size: 1.3rem;
-  }
-  #form .input-wrapper .input-container input{
-    height: 2rem;
-  }
-  #form .input-wrapper .input-container label {
-  display: none;
-  }
-  #form .input-wrapper .input-container input {
-    height: 2rem;
-  }
-  #form .input-wrapper #form-btn {
-    height: 2rem;
-  }
-  
 }
 @media (min-width: 450px) and (max-width: 568px) {
   .slider .carousel-inner .carousel-body{
@@ -172,7 +126,6 @@
   gap: 1.5rem;
 }
 .how-to-become-tutor-wrap  button{
-  margin:1rem 35vw;
   min-width: 30vw;
 }
   .how-to-become-tutor .how-img-container img{
@@ -226,10 +179,6 @@
   .how-to-become-tutor-wrap .inner-content-wrapper .icon{
     font-size: 9rem;
   }
-  .how-to-become-tutor-wrap  button{
-    margin:1rem 38vw;
-    min-width: 22vw;
-  }
     .how-to-become-tutor .how-img-container img{
       max-width: 80vw;
       min-height: 14rem;
@@ -274,7 +223,6 @@
    }
    .how-to-become-tutor-wrap  button{
      width: 20vw;    
-     margin:2% 34vw; 
    }
    .how-to-become-tutor .how-img-container img{
     display: none;

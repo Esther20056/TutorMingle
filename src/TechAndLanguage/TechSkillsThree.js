@@ -124,10 +124,10 @@ function TechSkillsThree() {
                 <div className="form-input">
                     <label htmlFor="">For how long</label>
                       <select name="how_long" id="">
-                        <option value="1 Week">1 Week</option>
-                        <option value="2 Weeks">2 Weeks</option>
-                        <option value="3 Weeks">3 Weeks</option>
-                        <option value="4 Weeks">4 Weeks</option>
+                        <option value="1-Week">1 Week</option>
+                        <option value="2-Weeks">2 Weeks</option>
+                        <option value="3-Weeks">3 Weeks</option>
+                        <option value="4-Weeks">4 Weeks</option>
                         <option value="Monthly">Monthly</option>
                         </select> 
                 </div>
@@ -136,9 +136,8 @@ function TechSkillsThree() {
                     </label>
                   <select name="how_soon" id="">
                   <option value="Immediately">Immediately</option>
-                    <option value="In a few days">In a few days</option>
-                    <option value="In a few weeks">In a few weeks</option>
-                    <option value=""></option>
+                    <option value="In-a-few-days">In a few days</option>
+                    <option value="In-a-few-weeks">In a few weeks</option>
                   </select>
                 </div>
                 <button type="submit" disabled={loading}>

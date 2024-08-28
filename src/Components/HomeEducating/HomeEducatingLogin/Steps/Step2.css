@@ -127,16 +127,20 @@ button:hover {
     color: white;
     cursor: pointer;
 }
-@media (max-width: 568px) {
+@media (min-width: 0px) and (max-width: 572px) {
     .step2-mainwrapper{
         padding:3rem 1rem 0 1rem;
+    }
+    .step2-mainwrapper .step2-second-inner-wrapper-form, 
+    .step2-first-inner-wrapper-form{
+     min-width: 85vw !important;
     }
     .step2-second-inner-wrapper-form .redirect-text{
         font-size: 1rem;
     }
     .form-inputs .lesson-days-main-wrapper {
         grid-template-columns: 1fr; 
-        margin-left: 13rem;
+        margin-left: 15rem;
     }
     .form-inputs .lesson-days-wrapper input{
         margin-right: -3rem;

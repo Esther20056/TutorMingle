@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Didot:wght@400;700&display=swap');
 
 *{
@@ -17,6 +17,7 @@
     padding:1.3rem  3.5rem;
     position:fixed;
     top: 0;
+    cursor: pointer;
     width: 100%;
     max-height:5rem;
     z-index: 1;
@@ -53,16 +54,37 @@
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 3.5rem;
-    height: 3rem;
+    width: 3rem;
+    height: 2.5rem;
     position: absolute;
     border: #c81643 5px groove;
     border-radius: 0.4rem;
     right: 0.9rem;
     bottom: 0.01rem;
-    margin:3rem 2rem 0.8rem 2rem;
-    
+    margin:3rem 2rem 0.8rem 2rem;   
 }
+  .cancel-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent; 
+    border: #c81643 5px groove;
+    width: 3rem;
+    height: 2.5rem;
+    border-radius: 0.4rem;
+    color: var(--Sage-Green); 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  .cancel-button .times {
+    font-size: 2rem;
+    color: var(--Sage-Green);
+  }
+  .hamburger.hidden {
+    display: none !important; 
+  }
 .Menu .hamburger span{
     background-color: var(--Sage-Green);
     width: 2rem;
@@ -97,9 +119,11 @@
 @media (min-width: 901px) {
     .Menu{
         background-color:var(--bgColorTwo);
-        /* padding:1.3rem 2.5rem; */
+        padding:1.3rem 2.5rem;
     }
     .Menu .links-container #nav-menu li{
         margin-left: 1rem;
     }
     }
+
+    

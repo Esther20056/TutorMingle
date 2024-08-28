@@ -20,6 +20,9 @@
  display: flex;
  gap: 0.3rem;
 }
+ #about-p{
+  font-size: 1.07rem;
+}
 .image-info-container{
   display: flex;
   gap: 5rem;

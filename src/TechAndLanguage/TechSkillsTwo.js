@@ -51,7 +51,7 @@ function TechSkillsTwo() {
         }
     };
   return (
-    <div className='step2-mainwrapper'>
+    <div className='step2-mainwrapper burgundy'>
         <div className="step2-inner-wrapper">
             <form action="" className='form' onSubmit={(e) => handleSubmit(e)}>
                 <div className="step2-second-inner-wrapper-form">
@@ -95,9 +95,9 @@ function TechSkillsTwo() {
                     <label htmlFor="">Do you prefer a male or female tutor?
                     </label>
                     <select name="tutor_gender" id="">
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Any gender is fine">Any gender is fine</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="A">Any gender is fine</option>
                     </select>
                 </div>
                 <div className="form-input">

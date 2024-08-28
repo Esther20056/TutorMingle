@@ -23,6 +23,12 @@ function BecomeEducator() {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [hoveredTutor, setHoveredTutor] = useState(null);
     const [visible, setVisible] = useState(true); 
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [phoneError, setPhoneError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const [formValid, setFormValid] = useState(false);
 
     const formatPhoneNumber = (input) => {
         const cleaned = ('' + input).replace(/\D/g, '');
@@ -32,6 +38,7 @@ function BecomeEducator() {
     const handleChange = (e) => {
         const input = e.target.value;
         formatPhoneNumber(input);
+        setPhone(input);
     };
     const togglePasswordVisibility = () => {
         setPasswordVisible(!passwordVisible);
@@ -43,36 +50,54 @@ function BecomeEducator() {
         }, 9000); 
         return () => clearInterval(interval);
       }, []);
-    async function handleSubmit(w) {
-        w.preventDefault();
-        let form = new FormData(w.currentTarget);
-        try {
-            await axios.post("http://localhost:8000/first/", form);
-            Swal.fire({
-                icon: 'success',
-                title: 'Success!',
-                text: '🎉 Welcome to TutorMingle! Your account has been successfully created 🎉',
-                customClass: {
-                    popup: 'custom-swal-popup',
-                    title: 'custom-swal-title',
-                    content: 'custom-swal-content',
-                    confirmButton: 'custom-swal-confirm',
-                    cancelButton: 'custom-swal-cancel',
-                    icon: 'custom-swal-icon'
-                }
-            }).then(() => {
-                navigate("/signup/step");
-            });
-        } catch (err) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Error!',
-                text: err?.response?.data ? 'Failed to submit form. Please check your inputs and try again.' : 'Something went wrong. Please try again later.',
-            });
-        } finally {
-            setLoading(false);
+      const validateForm = () => {
+        let isValid = true;
+        setEmailError('');
+        setPhoneError('');
+        setPasswordError('');
+
+        if (!email) {
+            setEmailError('Email is required.');
+            isValid = false;
         }
-    }
+        if (!phone) {
+            setPhoneError('Phone number is required.');
+            isValid = false;
+        }
+        if (!password) {
+            setPasswordError('Password is required.');
+            isValid = false;
+        }
+
+        setFormValid(isValid);
+        return isValid;
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    
+        if (!validateForm()) return;
+        setLoading(true);
+    
+        Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: '🎉 Welcome to TutorMingle! Your account has been successfully created 🎉',
+            customClass: {
+                popup: 'custom-swal-popup',
+                title: 'custom-swal-title',
+                content: 'custom-swal-content',
+                confirmButton: 'custom-swal-confirm',
+                cancelButton: 'custom-swal-cancel',
+                icon: 'custom-swal-icon'
+            }
+        }).then(() => {
+            navigate("/signup/step");
+        }).finally(() => {
+            setLoading(false);
+        });
+    };
+    
     const [data, setData] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
@@ -201,31 +226,42 @@ function BecomeEducator() {
             <form action="" className={ModalOpen ? 'open' : ""} id="form" onSubmit={(w) => handleSubmit(w)}>
                 <h4>Register here</h4>
                 <div className="input-wrapper">
-                    <div className="input-container">
-                        <label htmlFor="">Email</label>
-                        <input type="email" name='email' placeholder='Your email address' />
-                    </div>
-                    <div className="input-container">
-                        <label htmlFor="">Phone</label>
-                        <input type="text" id="phoneNumber" name="phone" value={phoneNumber} onChange={handleChange} placeholder="Your phone number" maxLength={13} />
-                    </div>
-                    <div className="input-container">
-                        <label htmlFor="">Password</label>
-                        <div style={{ position: 'relative' }}>
-                            <input
-                                type={passwordVisible ? 'text' : 'password'}
-                                value={password}
-                                name='password'
-                                placeholder='Your Password'
-                                onChange={(e) => setPassword(e.target.value)}
+                <div className="input-container">
+                            <label htmlFor="email">Email:</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                value={email} 
+                                onChange={(e) => setEmail(e.target.value)} 
                             />
-                            {passwordVisible ? (
+                            {emailError && <p className="error">{emailError}</p>}
+                        </div>
+                        <div className="input-container">
+                            <label htmlFor="phone">Phone:</label>
+                            <input 
+                                type="text" 
+                                id="phone" 
+                                value={phoneNumber} 
+                                onChange={handleChange} 
+                            />
+                            {phoneError && <p className="error">{phoneError}</p>}
+                        </div>
+                        <div className="input-container">
+                            <label htmlFor="password">Password:</label>
+                            <div style={{ position: 'relative' }}>
+                            <input 
+                                type={passwordVisible ? 'text' : 'password'} 
+                                id="password" 
+                                value={password} 
+                                onChange={(e) => setPassword(e.target.value)} 
+                            />
+                              {passwordVisible ? (
                                 <BsEyeSlash
                                     onClick={togglePasswordVisibility}
                                     style={{
                                         position: 'absolute',
                                         right: '10px',
-                                        top: '50%',
+                                        top: '40%',
                                         transform: 'translateY(-50%)',
                                         cursor: 'pointer',
                                     }}
@@ -236,14 +272,15 @@ function BecomeEducator() {
                                     style={{
                                         position: 'absolute',
                                         right: '10px',
-                                        top: '50%',
+                                        top: '40%',
                                         transform: 'translateY(-50%)',
                                         cursor: 'pointer',
                                     }}
                                 />
                             )}
+                            {passwordError && <p className="error">{passwordError}</p>}
+                            </div>
                         </div>
-                    </div>
                     <button id='form-btn' style={{ fontWeight: "600" }} type='submit'>Register</button>
                     <button id='form-btn' type="button" style={{ color: "#FFF8DC", fontWeight: "600" }} onClick={() => setModalOpen(false)}>Cancel</button>
                 </div>
