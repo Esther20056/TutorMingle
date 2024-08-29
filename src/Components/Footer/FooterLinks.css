@@ -30,7 +30,7 @@
     font-size: 1.2rem;
 }
 @media (min-width: 0px) and (max-width:576px) {
-    .contact-us, .who-we-are, .careers .FAQ{
+    .contact-us, .who-we-are, .careers, .FAQ{
         padding: 9rem 2rem 7rem 2rem;
     }
 }

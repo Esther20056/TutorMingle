@@ -126,7 +126,7 @@ border-radius: 1rem;
     border-radius: 2rem;
     border: none;
     outline: none;
-    margin: auto;
+    margin:0 30vw;
 }
 .first-content-container button a{
     font-size: 1rem;
