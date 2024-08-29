@@ -5,7 +5,7 @@
     font-family: sans-serif;
 }
 .main_Wrapper {
-    padding-top: 6rem;
+    padding:6rem 0 2rem 0;
     background: linear-gradient(to right, #eee5c2, #FFF8DC, #eadfb3, #e8d793);
     color: var(--Burgundy);
 }
@@ -51,16 +51,16 @@ marquee {
     font-weight: 600;
 }
 .signup_container input,
-select, textarea,
-.button {
-    width: 100% !important;
+.signup_container select, .signup_container textarea,
+.signup_container .button {
+    min-width: 100% !important;
     height: 3.5rem !important;
     border-radius: 0.7rem;
     border: 0.8px var(--Burgundy) solid !important;
     padding: 0 1rem;
     overflow: auto;
+    background-color: transparent;
 }
-
 input .error{
     color: var(--Burgundy);
 }
@@ -84,10 +84,6 @@ input .error{
 }
 
 .signup_container .button {
-    margin: 3rem 1rem 0 1rem;
-    width: 98%;
-    border-radius: 0.7rem;
-    border: none;
     background-color: var(--Burgundy);
     color: var(--textforburgundy);
     font-weight: 600;

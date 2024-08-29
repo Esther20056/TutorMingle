@@ -270,8 +270,11 @@
   display: block;
   top: 0;
 }
+#form .error{
+  color: var(--Burgundy);
+}
 .comment-pop-up{
-  margin:2rem 4rem;
+  margin:2rem  4rem 6rem 4rem;
   color: var(--Burgundy);
 }
 .popup-content{

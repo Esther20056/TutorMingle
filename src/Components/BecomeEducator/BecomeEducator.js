@@ -261,7 +261,7 @@ function BecomeEducator() {
                                     style={{
                                         position: 'absolute',
                                         right: '10px',
-                                        top: '40%',
+                                        top: '45%',
                                         transform: 'translateY(-50%)',
                                         cursor: 'pointer',
                                     }}
@@ -272,7 +272,7 @@ function BecomeEducator() {
                                     style={{
                                         position: 'absolute',
                                         right: '10px',
-                                        top: '40%',
+                                        top: '45%',
                                         transform: 'translateY(-50%)',
                                         cursor: 'pointer',
                                     }}

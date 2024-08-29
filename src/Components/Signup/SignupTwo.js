@@ -208,15 +208,15 @@ function SignupTwo() {
                                 <label>Teaching in-person or online</label>
                                 <p>Indicate if you prefer to teach online, physically (usually at the client's location) or both. To teach online, you must have a laptop and reliable internet connectivity.</p>
                                 <div className="gender-input-container">
-                                    <div className="gender">
+                                    <div className="gender gender-two">
                                         <label>Physical</label>
                                         <input type="radio" name="teaching_mode" value="Physical" />
                                     </div>
-                                    <div className="gender">
+                                    <div className="gender gender-two">
                                         <label>Online</label>
                                         <input type="radio" name="teaching_mode" value="Online" />
                                     </div>
-                                    <div className="gender">
+                                    <div className="gender gender-two">
                                         <label>Both</label>
                                         <input type="radio" name="teaching_mode" value="Both" />
                                     </div>

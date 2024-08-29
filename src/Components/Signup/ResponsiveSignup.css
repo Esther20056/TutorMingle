@@ -1,9 +1,9 @@
 @media (max-width: 568px){
     .signup {
-        margin:-2rem 0% 0rem 0%;
+        padding:4rem 5% 4rem 5%;
     }
     .main_Wrapper {
-        padding-top: 5rem;
+        padding-top:5rem;
     }
     .signup h4 {
         font-size: 1.3rem;
@@ -15,19 +15,10 @@
     .signup_container {
         gap: 3rem;
     }
-.signup_container input,
-select, textarea,
-.button {
-    width: 70vw !important;
-    padding:1.5%;
-    gap: 0;
-}
-.gender input[type="radio"] {
+
+.gender-two input[type="radio"] {
     width: 4rem !important;
     height: 3.5rem;
-}
-.signup_container select{
-    width: 95% !important;
 }
 input::placeholder{
     font-size: 0.9rem;
@@ -75,7 +66,7 @@ input::placeholder{
 
 }
 @media (min-width: 425px) and (max-width: 568px){
-    .gender input[type="radio"] {
+    .gender-two input[type="radio"] {
         width: 5.5rem !important;
         height: 3.5rem;
     }
