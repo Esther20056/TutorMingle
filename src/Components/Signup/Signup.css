@@ -53,7 +53,7 @@ marquee {
 .signup_container input,
 .signup_container select, .signup_container textarea,
 .signup_container .button {
-    min-width: 100% !important;
+    width: 100% !important;
     height: 3.5rem !important;
     border-radius: 0.7rem;
     border: 0.8px var(--Burgundy) solid !important;
@@ -82,12 +82,15 @@ input .error{
     color: var(--bgColorTwo);
     text-decoration: underline;
 }
-
+#about_yourself{
+    padding-top: 1rem;
+}
 .signup_container .button {
     background-color: var(--Burgundy);
     color: var(--textforburgundy);
     font-weight: 600;
     font-size: 1rem;
+    margin-top: 1.5rem;
 }
 
 .gender input[type="radio"] {
@@ -107,21 +110,21 @@ input .error{
 }
 .gender input[type="radio"]:checked {
     background-color: var(--Burgundy);
-}
-                                                                                                                                                                                                             
-.lesson-days-main-wrapper{
+}                                                                                                                                                                                                            
+ .lesson-days-main-wrapper{
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
     margin:1.3rem 0 ;
 }
-.lesson-days-wrapper input{
+
+.lesson-days-wrapper #lesson-days-input{
     width: 1.6rem !important;
     height: 1.6rem !important;
 }
 .lesson-days-wrapper{
     display: flex;
-    gap: 0.4rem;
+    gap: 4rem;
 }
 .work_container{
     display: flex !important;

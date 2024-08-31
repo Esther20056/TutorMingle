@@ -89,7 +89,7 @@ select option{
 .form-inputs .header-label{
     padding-bottom: 1rem;
 }
-.form-inputs .lesson-days-main-wrapper{
+/* .form-inputs .lesson-days-main-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5rem;
@@ -102,7 +102,7 @@ select option{
     display: flex;
     align-items: center;
     gap: 0.4rem;
-}
+} */
 .step2-second-inner-wrapper-form .redirect-text{
     font-size: 1.2rem;
 }

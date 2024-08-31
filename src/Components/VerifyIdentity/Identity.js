@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import axios from 'axios';
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.css';
 import './Identity.css';
@@ -10,6 +9,7 @@ function Identity() {
     const canvasRef = useRef(null);
     const [stream, setStream] = useState(null);
     const [cameraActive, setCameraActive] = useState(false);
+    const [image, setImage] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -18,7 +18,6 @@ function Identity() {
             navigate(`/signup/${signupStep}`);
         }
     }, [navigate]);
-    
 
     const startCamera = async () => {
         try {
@@ -45,29 +44,22 @@ function Identity() {
             const context = canvas.getContext('2d');
             context.drawImage(video, 0, 0, canvas.width, canvas.height);
             const imageData = canvas.toDataURL('image/jpeg');
-            try {
-                await axios.post('http://localhost:8000/capturedimage/', { image: imageData });
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Success!',
-                    text: '🎉 Your image was successfully captured! 🎉',
-                    customClass: {
-                        popup: 'custom-swal-popup',
-                        title: 'custom-swal-title',
-                        content: 'custom-swal-content',
-                        confirmButton: 'custom-swal-confirm',
-                    },
-                    confirmButtonText: 'Continue',
-                }).then(() => {
-                    navigate('/educator_dashboard');
-                });
-            } catch (err) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Submission Failed!',
-                    text: 'Failed to submit image. Please try again.',
-                });
-            }
+            setImage(imageData); 
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: '🎉 Your image was successfully captured! 🎉',
+                customClass: {
+                    popup: 'custom-swal-popup',
+                    title: 'custom-swal-title',
+                    content: 'custom-swal-content',
+                    confirmButton: 'custom-swal-confirm',
+                },
+                confirmButtonText: 'Continue',
+            }).then(() => {
+                navigate('/educator_dashboard');
+            });
         }
     };
 
@@ -95,6 +87,12 @@ function Identity() {
                 <div>
                     <canvas ref={canvasRef} width={640} height={480} style={{ display: 'none' }} />
                 </div>
+                {image && (
+                    <div>
+                        <h4>Captured Image:</h4>
+                        <img src={image} alt="Captured" style={{ width: '640px', height: '480px' }} />
+                    </div>
+                )}
             </div>
         </div>
     );
