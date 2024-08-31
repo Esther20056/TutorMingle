@@ -11,7 +11,7 @@ function Form() {
 
   const formatPhoneNumber = (input) => {
     const cleaned = ('' + input).replace(/\D/g, '');
-    const formatted = cleaned.replace(/(\d{3})(\d{3})(\d{4})/, '$1 $2 $3');
+    const formatted = cleaned.replace(/(\d{4})(\d{3})(\d{4})/, '$1 $2 $3');
     setPhoneNumber(formatted);
   };
 
