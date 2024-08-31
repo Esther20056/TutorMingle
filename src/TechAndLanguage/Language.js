@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import './Language.css';
-import './LanguageResponsive.css'
+import './LanguageResponsive.css';
 
 function Language() {
   const [loading, setLoading] = useState(false);
@@ -28,52 +27,39 @@ function Language() {
     }, 2000); 
     return () => clearInterval(interval);
   }, []);
-  async function handleSubmit(e) {
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     setErrors({});
+    console.log('Form Data:', formData);
+    Swal.fire({
+      icon: 'success',
+      title: 'Success!',
+      text: '🎉 Congratulations! You have successfully completed the first step of the form! 🎉',
+      customClass: {
+        popup: 'custom-swal-popup',
+        title: 'custom-swal-title',
+        content: 'custom-swal-content',
+        confirmButton: 'custom-swal-confirm',
+        cancelButton: 'custom-swal-cancel',
+        icon: 'custom-swal-icon'
+      }
+    }).then(() => {
+      navigate("/languagesteptwo");
+    });
     
-    const formElement = e.currentTarget;
-    const formData = new FormData(formElement);
-    for (const [key, value] of formData.entries()) {
-      console.log(`${key}: ${value}`);
-    }
-  
-    try {
-      const response = await axios.post("http://localhost:8000/languagefirst/", formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      });
-      console.log('Response:', response);
-  
-      Swal.fire({
-        icon: 'success',
-        title: 'Success!',
-        text: '🎉 Congratulations! You have successfully completed the first step of the form! 🎉',
-        customClass: {
-          popup: 'custom-swal-popup',
-          title: 'custom-swal-title',
-          content: 'custom-swal-content',
-          confirmButton: 'custom-swal-confirm',
-          cancelButton: 'custom-swal-cancel',
-          icon: 'custom-swal-icon'
-        }
-      }).then(() => {
-        navigate("/languagesteptwo");
-      });
-    } catch (err) {
-      console.error('Error:', err.response?.data); 
-      Swal.fire({
-        icon: 'error',
-        title: 'Error!',
-        text: err.response?.data?.detail ? err.response.data.detail : 'Something went wrong. Please try again later.',
-      });
-    } finally {
-      setLoading(false);
-    }
-  }
-  
+    setLoading(false);
+  };
+
   return (
     <div className='language-main-container'>
       <div className="language-wrapper-two">
@@ -98,6 +84,8 @@ function Language() {
               <select
                 name="language"
                 id="language"
+                value={formData.language}
+                onChange={handleChange}
               >
                 <option value="">Select a language</option>
                 <option value="Yoruba">Yoruba Language</option>
@@ -117,6 +105,8 @@ function Language() {
                 name="address"
                 id="address"
                 placeholder='e.g plot 256 Norus Close, Omole'
+                value={formData.address}
+                onChange={handleChange}
               />
             </div>
             <div className="language-input-container">
@@ -126,6 +116,8 @@ function Language() {
                 name="city"
                 id="city"
                 placeholder='e.g Ogunnusi bus stop'
+                value={formData.city}
+                onChange={handleChange}
               />
             </div>
             <div className="language-input-container">
@@ -133,6 +125,8 @@ function Language() {
               <select
                 name="state"
                 id="state"
+                value={formData.state}
+                onChange={handleChange}
               >
                 <option value="">Select a state</option>
                 <option value="Abia">Abia</option>
@@ -178,6 +172,8 @@ function Language() {
               <select
                 name="students"
                 id="students"
+                value={formData.students}
+                onChange={handleChange}
               >
                 <option value="">Select number of students</option>
                 <option value="1">1</option>
@@ -190,8 +186,10 @@ function Language() {
             <div className="language-input-container">
               <label htmlFor="howSoon">To start how soon?</label>
               <select
-                name="how_soon"
+                name="howSoon"
                 id="howSoon"
+                value={formData.howSoon}
+                onChange={handleChange}
               >
                 <option value="">Select timing</option>
                 <option value="Immediately">Immediately</option>
@@ -202,7 +200,7 @@ function Language() {
             <button type="submit" disabled={loading} className='language-btn'>
               {loading ? 'Submitting...' : 'Submit'}
             </button>
-        </form>
+          </form>
         </div>
       </div>
     </div>

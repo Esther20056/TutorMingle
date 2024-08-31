@@ -15,6 +15,9 @@
 .back_btn a{
  color: var(--textforburgundy);
 }
+.error-text{
+    color: var(--textforburgundy);
+}
 .dashboard_inner_wrapper{
     display: flex;
     flex-direction: column;

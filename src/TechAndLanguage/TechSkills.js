@@ -3,7 +3,6 @@ import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.css';
 import '../Components/HomeEducating/HomeEducatingLogin/Form.css';
 import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
 
 function TechSkills() {
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -22,44 +21,42 @@ function TechSkills() {
     formatPhoneNumber(input);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     setErrors({});
-
-    try {
-      const formData = new FormData(e.currentTarget);
-      await axios.post("http://localhost:8000/techskills/", formData);
-      Swal.fire({
-        icon: 'success',
-        title: 'Success!',
-        text: '🎉 Congratulations! You have successfully completed Part 1 of the form! 🎉',
-        customClass: {
-          popup: 'custom-swal-popup',
-          title: 'custom-swal-title',
-          content: 'custom-swal-content',
-          confirmButton: 'custom-swal-confirm',
-          cancelButton: 'custom-swal-cancel',
-          icon: 'custom-swal-icon'
-        }
-      }).then(() => {
-        navigate("/tech_two");
-      });
-    } catch (err) {
-      if (err?.response?.data) {
-        const errorMessages = err.response.data;
-        let customMessage = 'Failed to submit form. Please check your inputs and try again.';
-        const fieldErrors = Object.entries(errorMessages).map(([field, message]) => {
-          if (field === 'email' && message.includes('already exists')) {
-            customMessage = 'A user with this email already exists. Please use a different email address.';
-          }
-          return `<p><strong>${field}:</strong> ${message}</p>`;
-        }).join('');
+    const formData = new FormData(e.currentTarget);
+    const formDataObject = {};
+    formData.forEach((value, key) => {
+      formDataObject[key] = value;
+    });
+    setTimeout(() => {
+      const newErrors = {};
+      if (!formDataObject.f_name) newErrors.f_name = 'First name is required';
+      if (!formDataObject.l_name) newErrors.l_name = 'Last name is required';
+      if (!formDataObject.email) newErrors.email = 'Email is required';
+      if (!formDataObject.phone) newErrors.phone = 'Phone number is required';    
+      if (Object.keys(newErrors).length > 0) {
+        setErrors(newErrors);
         Swal.fire({
           icon: 'error',
           title: 'Error!',
-          text: customMessage,
-          footer: `<div>${fieldErrors}</div>`,
+          text: 'Please fix the errors and try again.',
+          customClass: {
+            popup: 'custom-swal-popup',
+            title: 'custom-swal-title',
+            content: 'custom-swal-content',
+            confirmButton: 'custom-swal-confirm',
+            cancelButton: 'custom-swal-cancel',
+            icon: 'custom-swal-icon'
+          }
+        });
+        setLoading(false);
+      } else {
+        Swal.fire({
+          icon: 'success',
+          title: 'Success!',
+          text: '🎉 Congratulations! You have successfully completed Part 1 of the form! 🎉',
           customClass: {
             popup: 'custom-swal-popup',
             title: 'custom-swal-title',
@@ -69,21 +66,11 @@ function TechSkills() {
             icon: 'custom-swal-icon'
           }
         }).then(() => {
-          navigate("/homeducating");
+          navigate("/tech_two");
         });
-        setErrors(errorMessages);
-      } else {
-        Swal.fire({
-          icon: 'error',
-          title: 'Error!',
-          text: 'Something went wrong. Please try again later.',
-        }).then(() => {
-          navigate("/signup"); 
-        });
+        setLoading(false);
       }
-    } finally {
-      setLoading(false);
-    }
+    }, 1000); 
   };
 
   return (
