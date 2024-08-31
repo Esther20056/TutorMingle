@@ -1,45 +1,60 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Signup.css';
-import axios from 'axios';
 import Swal from 'sweetalert2';
-
-const sendConfirmationEmail = async (userId) => {
-  try {
-    const response = await axios.post('http://localhost:8000/send-confirmation-email/', { user_id: userId });
-    return response.data;
-  } catch (error) {
-    console.error('Error sending confirmation email:', error);
-    throw error;
+import Teach from '../../Images/Teach.png'
+import Teacher from '../../Images/Teacher.jpg'
+const staticData = {
+  about_users: [{
+    id: 1,
+    first_name: 'Kemisola',
+    last_name: 'Alakija',
+    email: 'kemisola678@gmaiol.com',
+    phone: '0703 567 2345',
+    birthday: '1990-01-01',
+    nationality: 'Nigeria',
+    state: 'Lagos',
+    gender: 'F',
+    region: 'Alimosho',
+    address: 'Plot 6 ayoola street, Gemade estate.',
+    grade: 'First Class',
+    degree: 'Bachelor of Education (B.Ed)',
+    school_name: 'University of Ibadan',
+    course: 'Education - Math, Technology and Sciences',
+    start_year: '2008',
+    end_year: '2012',
+    identification: Teach,
+    profile: Teacher,
+  }],
+  sign_up_two: {
+    expert_subjects: 'Math and Science',
+    specialized_areas: 'Algebra and Physics',
+    classes_you_teach: 'High School',
+    years_of_experience: '5 years',
+    days_available: 'Monday, Wednesday, Friday',
+    time_available: '12 PM, 2 PM, 5 PM',
+    teaching_mode: 'Both',
+    preferred_online_tool: 'Zoom'
+  },
+  tutors_experience: {
+    company_name: 'FASTA International School',
+    company_address: '456 akinola street, Omole phase 1',
+    company_phone_number: '0907 654 3210'
+  },
+  sign_up_three: {
+    about_yourself: 'Experienced tutor with a passion for teaching.',
+    rate_for_tutoring_sessions: '#5000.00',
+    payment_options: 'Transfer'
   }
 };
 
 function EducatorsDashboard() {
   const [emailSent, setEmailSent] = useState(false);
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [data] = useState(staticData);
   const navigate = useNavigate();
-  const userId = 3;
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`http://localhost:8000/getuser/${userId}/`);
-        setData(response.data);
-      } catch (error) {
-        console.error('Error fetching user data:', error);
-        setError('Failed to fetch user data.');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [userId]);
-
+  
   const handleSendConfirmationEmail = async () => {
     try {
-      await sendConfirmationEmail(userId);
       setEmailSent(true);
       Swal.fire({
         title: 'Success!',
@@ -47,7 +62,7 @@ function EducatorsDashboard() {
         icon: 'success',
         confirmButtonText: 'OK'
       }).then(() => {
-        navigate('/email-confirmed');
+        // navigate('/email-confirmed');
       });
     } catch (error) {
       Swal.fire({
@@ -59,19 +74,7 @@ function EducatorsDashboard() {
     }
   };
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
-  if (error) {
-    return <p>{error}</p>;
-  }
-
-  if (!data) {
-    return <p>No user data available.</p>;
-  }
-
-  const { about_users = [], sign_up_two, sign_up_three, tutors_experience } = data;
+  const { about_users = [], sign_up_two, tutors_experience, sign_up_three } = data;
 
   return (
     <div className="dashboard-mainwrapper">
@@ -84,7 +87,7 @@ function EducatorsDashboard() {
             <>
               <h2>{about_users[0].first_name} {about_users[0].last_name}</h2>
               <img
-                src={`http://localhost:8000${about_users[0].profile}`}
+                src={about_users[0].profile}
                 alt="Profile"
                 className="dashboard-header-img"
                 onError={(e) => e.target.src = '/path/to/default-image.png'}
@@ -117,14 +120,16 @@ function EducatorsDashboard() {
                   <p><strong>Start Year:</strong> {aboutUser.start_year}</p>
                   <p><strong>End Year:</strong> {aboutUser.end_year}</p>
                   <p><strong>Identification:</strong> <img
-                    src={`http://localhost:8000${aboutUser.identification}`}
-                    alt="Identification"   className="dashboard-header-img"
+                    src={aboutUser.identification}
+                    alt="Identification"
+                    className="dashboard-header-img"
                     onError={(e) => e.target.src = '/path/to/default-image.png'}
                   />
                   </p>
                   <p><strong>Profile Picture:</strong> <img
-                    src={`http://localhost:8000${aboutUser.profile}`}
-                    alt="Profile"    className="dashboard-header-img"
+                    src={aboutUser.profile}
+                    alt="Profile"
+                    className="dashboard-header-img"
                     onError={(e) => e.target.src = '/path/to/default-image.png'}
                   /></p>
                 </div>
@@ -143,15 +148,15 @@ function EducatorsDashboard() {
                 <p><strong>Subject(s) of expertise:</strong> {sign_up_two.expert_subjects}</p>
                 <p><strong>Specialized areas of knowledge:</strong> {sign_up_two.specialized_areas}</p>
                 <p><strong>Classes you teach:</strong> {sign_up_two.classes_you_teach}</p>
-                <p><strong>Years of Experience:</strong> {sign_up_two.years_of_experience}</p>
+                <p><strong>Years of Experience: </strong> {sign_up_two.years_of_experience}</p>
                 <p>
-                  <strong>Days available for tutoring sessions:</strong>
+                  <strong>Days available for tutoring sessions: </strong>
                   {Array.isArray(sign_up_two.days_available) 
                     ? sign_up_two.days_available.join(', ') 
                     : sign_up_two.days_available || 'Not specified'}
                 </p>
                 <p>
-                  <strong>Times available for tutoring sessions:</strong>
+                  <strong>Times available for tutoring sessions: </strong>
                   {Array.isArray(sign_up_two.time_available) 
                     ? sign_up_two.time_available.join(', ') 
                     : sign_up_two.time_available || 'Not specified'}
@@ -165,7 +170,7 @@ function EducatorsDashboard() {
             <Link to="/signup/step2">Edit Step Two</Link>
           </div>
 
-          {/* SignUpThree Data */}
+          {/* Tutors Experience Data */}
           <div className='data_wrapper'>
             <h3>Step Three</h3>
             {tutors_experience ? (
@@ -179,6 +184,8 @@ function EducatorsDashboard() {
             )}
             <Link to="/signup/step3">Edit Step Three</Link>
           </div>
+          
+          {/* SignUpThree Data */}
           <div className='data_wrapper'>
             <h3>Step Four</h3>
             {sign_up_three ? (
@@ -206,4 +213,4 @@ function EducatorsDashboard() {
   );
 }
 
-export default EducatorsDashboard
+export default EducatorsDashboard;

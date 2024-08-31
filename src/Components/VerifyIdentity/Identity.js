@@ -25,6 +25,9 @@ function Identity() {
             setStream(stream);
             if (videoRef.current) {
                 videoRef.current.srcObject = stream;
+                videoRef.current.onloadedmetadata = () => {
+                    videoRef.current.play();
+                };
             }
             setCameraActive(true);
         } catch (error) {
@@ -82,7 +85,7 @@ function Identity() {
                     <button className='buttons' onClick={stopCamera} disabled={!cameraActive}>Stop Camera</button>
                 </div>
                 <div>
-                    {stream && <video ref={videoRef} autoPlay width={640} height={480} />}
+                    {stream && <video ref={videoRef} width={640} height={480} />}
                 </div>
                 <div>
                     <canvas ref={canvasRef} width={640} height={480} style={{ display: 'none' }} />

@@ -69,7 +69,11 @@
     cursor: pointer;
     font-size: 18px;
   }
-  
+  @media (min-width: 0px) and (max-width: 576px) {
+    .login-input-container input{
+        width: 80vw !important;
+    }  
+}
 @media (min-width: 567px) and (max-width: 756px) {
     .login-input-container input{
         width: 70vw !important;

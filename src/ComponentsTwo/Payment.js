@@ -135,7 +135,7 @@ const accordionItems = [
 
   return (
     <div className='dashboard-mainwrapper'>
-        <div className="dashboard">
+        <div className="dashboard payment-dashboard">
         <h2 style={{textDecoration: 'none'}}>Thank you for considering our educating services.</h2>
         <div className="payment-and-write-up-wrapper">
                 <div className="side-wrapper">

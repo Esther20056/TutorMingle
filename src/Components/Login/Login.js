@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Login.css';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+
 function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
@@ -11,20 +11,10 @@ function Login() {
   const [error, setError] = useState('');
   const [passwordVisible, setPasswordVisible] = useState(false);
 
-  localStorage.removeItem('signupProgress');
-
-  const handleLogin = async (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
-    localStorage.removeItem('signupProgress');
-
-    const formData = new FormData();
-    formData.append('email', email);
-    formData.append('password', password);
-
-    try {
-      const response = await axios.post('http://localhost:8000/login/', formData);
-      localStorage.setItem('user', JSON.stringify(response.data));
-
+    if (email && password) {
+      localStorage.setItem('user', JSON.stringify({ email }));
       const signupComplete = localStorage.getItem('signupComplete') === 'true';
       const signupProgress = localStorage.getItem('signupProgress') || 'step1';
       const destination = signupComplete ? '/dashboard' : `/signup/${signupProgress || '/signup'}`;
@@ -39,15 +29,8 @@ function Login() {
       }).then(() => {
         navigate(destination);
       });
-    } catch (err) {
-      let errorMessage = 'Something went wrong. Please try again.';
-      if (err.response && err.response.data) {
-        const errorResponse = err.response.data;
-        errorMessage = errorResponse.non_field_errors ? errorResponse.non_field_errors[0] : errorMessage;
-      } else if (!err.response) {
-        errorMessage = 'Network Error: Failed to connect to the server.';
-      }
-
+    } else {
+      const errorMessage = 'Please enter both email and password.';
       setError(errorMessage);
       Swal.fire({
         title: 'Error!',

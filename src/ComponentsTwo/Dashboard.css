@@ -66,7 +66,7 @@ padding-bottom: 0.8rem;
     width: 18vw;
     height: 9vh;
     text-align: center;
-    padding-top: 2.5vh;
+     padding:0.7rem 0;
     color: var(--textforburgundy);
     background-color: #800020;
     border-radius: 0.2rem;
@@ -200,10 +200,12 @@ border-radius: 1rem;
     .dashboard-mainwrapper{
         padding-top:5rem;
     }
+    .payment-dashboard{
+        padding-top: 5% ;
+    }
   .payment-btn{
         height: 3rem !important;
         min-width: 12rem;
-        padding-top: 1.8vh;
     }
     .dashboard_inner_wrapper .data_wrapper p{
         font-size: 1.2rem;
@@ -254,7 +256,7 @@ border-radius: 1rem;
         padding:2rem;
     }
     .service{
-        gap: 19%;
+        gap: 24%;
     }
     .service h4{
         font-size: 1.2rem;
@@ -384,7 +386,7 @@ border-radius: 1rem;
     }
   .payment-btn{
         height: 3rem !important;
-        min-width: 12rem;
+        width: 12rem;
     }
            .payment-and-write-up-wrapper{
             gap: 2rem;

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import './Login.css';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate();
@@ -12,16 +11,10 @@ function Login() {
   const [error, setError] = useState('');
   const [passwordVisible, setPasswordVisible] = useState(false);
 
-  const handleLogin = async (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
-
-    const formData = new FormData();
-    formData.append('email', email);
-    formData.append('password', password);
-
-    try {
-      const response = await axios.post('http://localhost:8000/login/', formData);
-      localStorage.setItem('user', JSON.stringify(response.data));
+    if (email && password) {
+      localStorage.setItem('user', JSON.stringify({ email }));
       Swal.fire({
         title: 'Success!',
         text: 'Login successful',
@@ -30,27 +23,14 @@ function Login() {
       }).then(() => {
         navigate('/homeducatingform');
       });
-
-    } catch (err) {
-      if (err.response && err.response.data) {
-        const errorResponse = err.response.data;
-        const errorMessage = errorResponse.non_field_errors ? errorResponse.non_field_errors[0] : 'Something went wrong. Please try again.';
-        setError(errorMessage);
-        Swal.fire({
-          title: 'Error!',
-          text: errorMessage,
-          icon: 'error',
-          confirmButtonText: 'OK'
-        });
-      } else {
-        setError('Network Error: Failed to connect to the server.');
-        Swal.fire({
-          title: 'Error!',
-          text: 'Network Error: Failed to connect to the server.',
-          icon: 'error',
-          confirmButtonText: 'OK'
-        });
-      }
+    } else {
+      setError('Please enter both email and password.');
+      Swal.fire({
+        title: 'Error!',
+        text: 'Please enter both email and password.',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
     }
   };
 
@@ -81,15 +61,16 @@ function Login() {
               placeholder='Enter your password'
               required
               aria-describedby='passwordHelp'
-            />  <button
-            type='button'
-            className='password-visibility-toggle'
-            onClick={() => setPasswordVisible(!passwordVisible)}
-          >
-            {passwordVisible ? <FaEyeSlash /> : <FaEye />}
-          </button>
+            />
+            <button
+              type='button'
+              className='password-visibility-toggle'
+              onClick={() => setPasswordVisible(!passwordVisible)}
+            >
+              {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+            </button>
+          </div>
         </div>
-      </div>
         {error && <div className='error-message'>{error}</div>}
         <button id='button' type='submit'>
           Login
@@ -100,4 +81,3 @@ function Login() {
 }
 
 export default Login;
-
