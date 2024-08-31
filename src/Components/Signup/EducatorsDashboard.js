@@ -62,7 +62,7 @@ function EducatorsDashboard() {
         icon: 'success',
         confirmButtonText: 'OK'
       }).then(() => {
-        // navigate('/email-confirmed');
+        navigate('/');
       });
     } catch (error) {
       Swal.fire({
