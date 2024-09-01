@@ -61,7 +61,7 @@ function Identity() {
                 },
                 confirmButtonText: 'Continue',
             }).then(() => {
-                navigate('/educator_dashboard');
+                navigate('/educatordashboard');
             });
         }
     };
