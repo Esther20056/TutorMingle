@@ -43,7 +43,7 @@ const staticData = {
   },
   sign_up_three: {
     about_yourself: 'Experienced tutor with a passion for teaching.',
-    rate_for_tutoring_sessions: '#5000.00',
+    rate_for_tutoring_sessions: '5000.00',
     payment_options: 'Transfer'
   }
 };
