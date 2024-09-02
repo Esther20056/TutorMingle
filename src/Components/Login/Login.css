@@ -35,6 +35,7 @@
     border-radius: 0.7rem;
     border:none;
     padding: 0 1rem;
+    background-color: var(--textforburgundy);
    outline: none;
    font-size: 1.3rem;
 }
