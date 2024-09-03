@@ -21,12 +21,18 @@ function Identity() {
 
     const startCamera = async () => {
         try {
+            // Check for getUserMedia support
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                throw new Error('getUserMedia is not supported in this browser.');
+            }
+
             const stream = await navigator.mediaDevices.getUserMedia({ video: true });
             setStream(stream);
+
             if (videoRef.current) {
                 videoRef.current.srcObject = stream;
                 videoRef.current.onloadedmetadata = () => {
-                    videoRef.current.play();
+                    videoRef.current.play().catch(error => console.error('Error playing video:', error));
                 };
             }
             setCameraActive(true);
@@ -40,29 +46,37 @@ function Identity() {
         }
     };
 
-    const captureImage = async () => {
+    const captureImage = () => {
         if (videoRef.current && canvasRef.current) {
             const video = videoRef.current;
             const canvas = canvasRef.current;
             const context = canvas.getContext('2d');
-            context.drawImage(video, 0, 0, canvas.width, canvas.height);
-            const imageData = canvas.toDataURL('image/jpeg');
-            setImage(imageData); 
+            
+            // Check if context is available
+            if (context) {
+                context.drawImage(video, 0, 0, canvas.width, canvas.height);
+                const imageData = canvas.toDataURL('image/jpeg');
+                setImage(imageData); 
 
-            Swal.fire({
-                icon: 'success',
-                title: 'Success!',
-                text: '🎉 Your image was successfully captured! 🎉',
-                customClass: {
-                    popup: 'custom-swal-popup',
-                    title: 'custom-swal-title',
-                    content: 'custom-swal-content',
-                    confirmButton: 'custom-swal-confirm',
-                },
-                confirmButtonText: 'Continue',
-            }).then(() => {
-                navigate('/educatordashboard');
-            });
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: '🎉 Your image was successfully captured! 🎉',
+                    customClass: {
+                        popup: 'custom-swal-popup',
+                        title: 'custom-swal-title',
+                        content: 'custom-swal-content',
+                        confirmButton: 'custom-swal-confirm',
+                    },
+                    confirmButtonText: 'Continue',
+                }).then(() => {
+                    navigate('/educatordashboard');
+                });
+            } else {
+                console.error('Canvas context is not available.');
+            }
+        } else {
+            console.error('VideoRef or CanvasRef is null');
         }
     };
 
