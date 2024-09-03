@@ -195,7 +195,7 @@ function Homeeducating() {
                 </div>
                 <div className="log-in-container">
                     <p>Already have an account?</p>
-                    <Link to="/login">Log In</Link>
+                    <Link to="/parents_login">Log In</Link>
                 </div>
             </form>
     </div>
