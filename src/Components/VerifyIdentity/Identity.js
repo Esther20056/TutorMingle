@@ -138,12 +138,26 @@ function Identity() {
         }
     }, [navigate]);
 
+    useEffect(() => {
+        // Debugging: List media devices
+        const listDevices = async () => {
+            try {
+                const devices = await navigator.mediaDevices.enumerateDevices();
+                console.log('Media Devices:', devices);
+            } catch (error) {
+                console.error('Error listing media devices:', error);
+            }
+        };
+        listDevices();
+    }, []);
+
     const startCamera = async () => {
         try {
             if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
                 throw new Error('getUserMedia is not supported in this browser.');
             }
 
+            console.log('Attempting to access camera...');
             const stream = await navigator.mediaDevices.getUserMedia({ video: true });
             setStream(stream);
 
@@ -219,7 +233,7 @@ function Identity() {
                     <button className='buttons' onClick={stopCamera} disabled={!cameraActive}>Stop Camera</button>
                 </div>
                 <div>
-                    {stream && <video ref={videoRef} width={640} height={480} />}
+                    {stream && <video ref={videoRef} width={640} height={480} autoPlay />}
                 </div>
                 <div>
                     <canvas ref={canvasRef} width={640} height={480} style={{ display: 'none' }} />
