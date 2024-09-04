@@ -112,10 +112,10 @@ function Identity() {
                     <button className='buttons' onClick={captureImage} disabled={!cameraActive}>Capture Image</button>
                     <button className='buttons' onClick={stopCamera} disabled={!cameraActive}>Stop Camera</button>
                 </div>
-                <div>
+                <div id='img-vid'>
                     {stream && <video ref={videoRef} width={500} height={380} autoPlay />}
                 </div>
-                <div>
+                <div id='img-vid'>
                     <canvas ref={canvasRef} width={500} height={380} style={{ display: 'none' }} />
                 </div>
                 {image && (
