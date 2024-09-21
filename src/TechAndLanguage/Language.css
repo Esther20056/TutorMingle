@@ -96,3 +96,7 @@
     display: flex;
     gap: 0.4rem;
 }
+option{
+    background-color: var(--Burgundy);
+    color: var(--textforburgundy);
+}
