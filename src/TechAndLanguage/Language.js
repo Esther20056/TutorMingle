@@ -76,7 +76,7 @@ function Language() {
         <div className="language-inner-wrapper">
           <div className="language-header-texts">
             <h2>Learn any Language</h2>
-            <p>Get an experienced Language educator in your area</p>
+            <p>Get an experienced language educator in your area</p>
           </div>
           <form onSubmit={handleSubmit} className='language-form'>
             <div className="language-input-container">
