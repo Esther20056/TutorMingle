@@ -79,12 +79,13 @@ function FAQ() {
         </p>
       </div>
 
-      <div>
+      {/* <div>
         <strong id='faq-p'>5. How are payments handled?</strong>
         <p>
+         
           Payments are processed securely through TutorMingle. You will receive payments based on the schedule you set, and you can track your earnings through your account dashboard.
         </p>
-      </div>
+      </div> */}
 
       <div>
         <strong id='faq-p'>6. What should I do if I have issues with a student or parent?</strong>
