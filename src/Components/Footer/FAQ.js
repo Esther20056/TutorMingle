@@ -88,7 +88,7 @@ function FAQ() {
       </div> */}
 
       <div>
-        <strong id='faq-p'>6. What should I do if I have issues with a student or parent?</strong>
+        <strong id='faq-p'>5. What should I do if I have issues with a student or parent?</strong>
         <p>
           If you encounter any issues, please contact our support team for assistance. We’re here to help resolve conflicts and ensure that both educators and students have a positive experience.
         </p>
