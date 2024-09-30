@@ -28,7 +28,7 @@ function Footer() {
          </div>
          <div className="quick-link-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
          <FaGreaterThan className='icon'/>
-         <Link to='' className='quick-link-wrapper-a'>Educators</Link>
+         <Link to='/educators' className='quick-link-wrapper-a'>Educators</Link>
          </div>
          <div className="quick-link-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
          <FaGreaterThan className='icon'/>

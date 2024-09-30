@@ -321,7 +321,7 @@ function Hero() {
             <div className="overlay">
                 <p className="overlay-p">Language</p>
                 <p>Improve reading, writing, and comprehension</p>
-                <button><Link to="/language">Get started</Link></button>
+                <button><Link to="/languagesignup">Get started</Link></button>
             </div>
         </div>
         <div className="content_first">

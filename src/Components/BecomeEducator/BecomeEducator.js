@@ -72,7 +72,6 @@ function BecomeEducator() {
         setFormValid(isValid);
         return isValid;
     };
-
     const handleSubmit = (e) => {
         e.preventDefault();
     
@@ -96,13 +95,12 @@ function BecomeEducator() {
         }).finally(() => {
             setLoading(false);
         });
-    };
-    
+    };    
     const [data, setData] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/teacherdetails/1'); // Replace 1 with the actual ID you want to fetch
+                const response = await axios.get('http://localhost:8000/teacherdetails/1'); //1 was the default in backend,replace 1 with the actual ID of the teacher you want to fetch
                 setData(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);

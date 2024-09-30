@@ -43,6 +43,7 @@ import NotFound from './Components/NotFound';
 import FAQ from './Components/Footer/FAQ';
 import ConfirmEmailPage from './ConfirmEmailPage';
 import EmailConfirmed from './EmailConfirmed';
+import LanguageSignup from './TechAndLanguage/LanguageSignup';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -82,6 +83,7 @@ function App() {
               <Route path='/message' element={<ConfirmationMessage />} />
               <Route path='/dashboard' element={<Dashboard />} />
               <Route path='/language' element={<Language />} />
+              <Route path='/languagesignup' element={<LanguageSignup/>} />
               <Route path='/languagesteptwo' element={<LanguageStepTwo/>} />
               <Route path='/languagestepthree' element={<LanguageStepThree/>} />
               <Route path='/tech_dashboard' element={<TechDashboard />} />

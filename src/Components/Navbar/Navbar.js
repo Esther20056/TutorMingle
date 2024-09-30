@@ -5,9 +5,13 @@ import './Navbar.css';
 function Navbar() {
   const [barsOpen, setBarsOpen] = useState(false);
 
+  const handleLinkClick = () => {
+    setBarsOpen(false);
+  };
+
   return (
     <div className="Menu">
-      <Link className="navbar-brand">Tutor<span>Mingle</span></Link>
+      <Link className="navbar-brand" to="/">Tutor<span>Mingle</span></Link>
       <div className={`hamburger ${barsOpen ? 'hidden' : ''}`} onClick={() => setBarsOpen(true)}>
         <span></span>
         <span></span>
@@ -20,10 +24,10 @@ function Navbar() {
       )}
       <div className={`links-container ${barsOpen ? 'open' : ''}`}>
         <ul id="nav-menu" className={barsOpen ? 'open' : ''}>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/educators">Educators</Link></li>
-          <li><Link to="/homeducating">Home Educating</Link></li>
-          <li><Link to="/becomeEducator">Become an Educator</Link></li>
+          <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
+          <li><Link to="/educators" onClick={handleLinkClick}>Educators</Link></li>
+          <li><Link to="/homeducating" onClick={handleLinkClick}>Home Educating</Link></li>
+          <li><Link to="/becomeEducator" onClick={handleLinkClick}>Become an Educator</Link></li>
         </ul>
       </div>
     </div>
@@ -31,4 +35,3 @@ function Navbar() {
 }
 
 export default Navbar;
-

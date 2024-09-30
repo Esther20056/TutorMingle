@@ -96,7 +96,88 @@
     display: flex;
     gap: 0.4rem;
 }
-option{
+select option{
     background-color: var(--Burgundy);
     color: var(--textforburgundy);
 }
+.language-form-container{
+    padding-top:0 4.7rem;
+    background-color:#FFF8DC;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+    #language-form{
+    margin:2rem auto;
+    padding: 1rem 2rem;
+    max-width: 20rem;
+    width: 100%;
+    min-height: 100%;
+    transition: top 0.5s; 
+    background-color: #fff;
+    border: var(--Burgundy) 2px solid;
+    border-radius: 1.9rem;
+    box-shadow: 0 0 10px rgba(128, 0, 32, 0.6);
+    box-sizing: border-box;
+  }
+  #language-form h4 {
+    padding-top: 0.8rem;
+    font-weight: 600;
+    color: var(--Burgundy);
+    text-align: center;
+    font-size: 1.5rem; 
+    text-decoration: underline;
+  }
+  #language-form   .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 1rem;
+  }
+  #language-form  .input-wrapper .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  #language-form  .input-wrapper .input-container label {
+    font-size: 1rem; 
+    font-weight: 600;
+  }
+  #language-form  .input-wrapper .input-container input {
+    height: 2.8rem !important;
+    width: 100%;
+    border-radius: 0.7rem;
+    border: 0.8px #dce5c9 solid;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+  #language-form  .input-wrapper #form-btn {
+    margin-top: 0.3rem;
+    height: 2.8rem !important;
+    background-color: var(--Burgundy);
+    border-radius: 0.7rem;
+    color: var(--textforburgundy);
+    border: none;
+  }
+  
+  #language-form  .log-in-container {
+    display: flex;
+    padding-top: 0.7rem;
+    justify-content: center;
+  }
+  
+  #language-form .log-in-container p {
+    margin-right: 0.3rem;
+  }
+  #language-form  .log-in-container a {
+    text-decoration: none;
+    color: var(--Burgundy);
+    font-weight: 600;
+  }
+  
+  #language-form  .log-in-container a:hover {
+    color: var(--bgColorTwo);
+  }
+  #language-form .error{
+    color: var(--Burgundy);
+  }
